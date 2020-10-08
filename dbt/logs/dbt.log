@@ -1,0 +1,1116 @@
+2020-10-08 04:52:36.684606 (MainThread): Got an exception trying to initialize tracking
+2020-10-08 04:52:36.684828 (MainThread): Running with dbt=0.16.0
+2020-10-08 04:52:36.795588 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, exclude=None, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='/usr/local/airflow/.dbt', project_dir='/usr/local/airflow/dbt', record_timing_info=None, rpc_method='run', single_threaded=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2020-10-08 04:52:36.798028 (MainThread): Tracking: do not track
+2020-10-08 04:52:36.832665 (MainThread): Partial parsing not enabled
+2020-10-08 04:52:36.835003 (MainThread): Parsing macros/core.sql
+2020-10-08 04:52:36.843651 (MainThread): Parsing macros/materializations/helpers.sql
+2020-10-08 04:52:36.860047 (MainThread): Parsing macros/materializations/table/table.sql
+2020-10-08 04:52:36.873706 (MainThread): Parsing macros/materializations/common/merge.sql
+2020-10-08 04:52:36.902418 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-10-08 04:52:36.914549 (MainThread): Parsing macros/materializations/view/view.sql
+2020-10-08 04:52:36.937273 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2020-10-08 04:52:37.051438 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2020-10-08 04:52:37.086532 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-10-08 04:52:37.089808 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2020-10-08 04:52:37.102350 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2020-10-08 04:52:37.105902 (MainThread): Parsing macros/materializations/seed/seed.sql
+2020-10-08 04:52:37.151928 (MainThread): Parsing macros/schema_tests/relationships.sql
+2020-10-08 04:52:37.154070 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2020-10-08 04:52:37.157753 (MainThread): Parsing macros/schema_tests/not_null.sql
+2020-10-08 04:52:37.159256 (MainThread): Parsing macros/schema_tests/unique.sql
+2020-10-08 04:52:37.161420 (MainThread): Parsing macros/etc/query.sql
+2020-10-08 04:52:37.163302 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2020-10-08 04:52:37.167144 (MainThread): Parsing macros/etc/get_custom_database.sql
+2020-10-08 04:52:37.169004 (MainThread): Parsing macros/etc/datetime.sql
+2020-10-08 04:52:37.187644 (MainThread): Parsing macros/etc/get_relation_comment.sql
+2020-10-08 04:52:37.191371 (MainThread): Parsing macros/etc/is_incremental.sql
+2020-10-08 04:52:37.194341 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2020-10-08 04:52:37.196024 (MainThread): Parsing macros/adapters/common.sql
+2020-10-08 04:52:37.298548 (MainThread): Parsing macros/relations.sql
+2020-10-08 04:52:37.301755 (MainThread): Parsing macros/adapters.sql
+2020-10-08 04:52:37.340234 (MainThread): Parsing macros/catalog.sql
+2020-10-08 04:52:37.345113 (MainThread): Parsing macros/materializations/snapshot_merge.sql
+2020-10-08 04:52:37.376394 (MainThread): Partial parsing not enabled
+2020-10-08 04:52:37.429128 (MainThread): Acquiring new postgres connection "model.ge_tutorials.npi_with_state".
+2020-10-08 04:52:37.429339 (MainThread): Opening a new connection, currently in state init
+2020-10-08 04:52:37.460620 (MainThread): Acquiring new postgres connection "model.ge_tutorials.count_providers_by_state".
+2020-10-08 04:52:37.460839 (MainThread): Opening a new connection, currently in state init
+2020-10-08 04:52:37.471146 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_state_abbreviations".
+2020-10-08 04:52:37.471288 (MainThread): Opening a new connection, currently in state init
+2020-10-08 04:52:37.481414 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_npi".
+2020-10-08 04:52:37.481590 (MainThread): Opening a new connection, currently in state init
+2020-10-08 04:52:38.067802 (MainThread): Found 4 models, 0 tests, 0 snapshots, 0 analyses, 127 macros, 0 operations, 0 seed files, 2 sources
+2020-10-08 04:52:38.072549 (MainThread): 
+2020-10-08 04:52:38.072930 (MainThread): Acquiring new postgres connection "master".
+2020-10-08 04:52:38.073042 (MainThread): Opening a new connection, currently in state init
+2020-10-08 04:52:38.099762 (ThreadPoolExecutor-0_0): Acquiring new postgres connection "list_airflow".
+2020-10-08 04:52:38.100042 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2020-10-08 04:52:38.257651 (ThreadPoolExecutor-0_0): Using postgres connection "list_airflow".
+2020-10-08 04:52:38.257811 (ThreadPoolExecutor-0_0): On list_airflow: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "connection_name": "list_airflow"} */
+
+    select distinct nspname from pg_namespace
+  
+2020-10-08 04:52:38.262265 (ThreadPoolExecutor-0_0): SQL status: SELECT 6 in 0.00 seconds
+2020-10-08 04:52:38.288630 (ThreadPoolExecutor-1_0): Acquiring new postgres connection "list_airflow_public".
+2020-10-08 04:52:38.288790 (ThreadPoolExecutor-1_0): Re-using an available connection from the pool (formerly list_airflow).
+2020-10-08 04:52:38.290952 (ThreadPoolExecutor-1_0): Using postgres connection "list_airflow_public".
+2020-10-08 04:52:38.291071 (ThreadPoolExecutor-1_0): On list_airflow_public: BEGIN
+2020-10-08 04:52:38.291516 (ThreadPoolExecutor-1_0): SQL status: BEGIN in 0.00 seconds
+2020-10-08 04:52:38.291661 (ThreadPoolExecutor-1_0): Using postgres connection "list_airflow_public".
+2020-10-08 04:52:38.291760 (ThreadPoolExecutor-1_0): On list_airflow_public: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "connection_name": "list_airflow_public"} */
+select
+      'airflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'airflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+2020-10-08 04:52:38.294874 (ThreadPoolExecutor-1_0): SQL status: SELECT 25 in 0.00 seconds
+2020-10-08 04:52:38.322422 (ThreadPoolExecutor-1_0): On list_airflow_public: ROLLBACK
+2020-10-08 04:52:38.346792 (MainThread): Using postgres connection "master".
+2020-10-08 04:52:38.346896 (MainThread): On master: BEGIN
+2020-10-08 04:52:38.349618 (MainThread): SQL status: BEGIN in 0.00 seconds
+2020-10-08 04:52:38.349734 (MainThread): Using postgres connection "master".
+2020-10-08 04:52:38.349820 (MainThread): On master: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+2020-10-08 04:52:38.355972 (MainThread): SQL status: SELECT 0 in 0.01 seconds
+2020-10-08 04:52:38.356977 (MainThread): On master: ROLLBACK
+2020-10-08 04:52:38.357241 (MainThread): Using postgres connection "master".
+2020-10-08 04:52:38.357342 (MainThread): On master: BEGIN
+2020-10-08 04:52:38.357753 (MainThread): SQL status: BEGIN in 0.00 seconds
+2020-10-08 04:52:38.357870 (MainThread): On master: COMMIT
+2020-10-08 04:52:38.357961 (MainThread): Using postgres connection "master".
+2020-10-08 04:52:38.358042 (MainThread): On master: COMMIT
+2020-10-08 04:52:38.358293 (MainThread): SQL status: COMMIT in 0.00 seconds
+2020-10-08 04:52:38.358592 (MainThread): 04:52:38 | Concurrency: 1 threads (target='dev')
+2020-10-08 04:52:38.358722 (MainThread): 04:52:38 | 
+2020-10-08 04:52:38.364320 (Thread-1): Began running node model.ge_tutorials.stg_npi
+2020-10-08 04:52:38.364490 (Thread-1): 04:52:38 | 1 of 4 START view model public.stg_npi............................... [RUN]
+2020-10-08 04:52:38.364779 (Thread-1): Acquiring new postgres connection "model.ge_tutorials.stg_npi".
+2020-10-08 04:52:38.364864 (Thread-1): Re-using an available connection from the pool (formerly list_airflow_public).
+2020-10-08 04:52:38.364957 (Thread-1): Compiling model.ge_tutorials.stg_npi
+2020-10-08 04:52:38.385378 (Thread-1): Writing injected SQL for node "model.ge_tutorials.stg_npi"
+2020-10-08 04:52:38.385682 (Thread-1): finished collecting timing info
+2020-10-08 04:52:38.428215 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-10-08 04:52:38.428327 (Thread-1): On model.ge_tutorials.stg_npi: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_npi"} */
+drop view if exists "airflow"."public"."stg_npi__dbt_tmp" cascade
+2020-10-08 04:52:38.428834 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 04:52:38.431247 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-10-08 04:52:38.431343 (Thread-1): On model.ge_tutorials.stg_npi: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_npi"} */
+drop view if exists "airflow"."public"."stg_npi__dbt_backup" cascade
+2020-10-08 04:52:38.431603 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 04:52:38.433592 (Thread-1): Writing runtime SQL for node "model.ge_tutorials.stg_npi"
+2020-10-08 04:52:38.433897 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-10-08 04:52:38.433983 (Thread-1): On model.ge_tutorials.stg_npi: BEGIN
+2020-10-08 04:52:38.434228 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2020-10-08 04:52:38.434333 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-10-08 04:52:38.434412 (Thread-1): On model.ge_tutorials.stg_npi: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_npi"} */
+
+  create view "airflow"."public"."stg_npi__dbt_tmp" as (
+    select 
+	npi as npi,
+	entity_type_code as entity_type_code,
+	organization_name as organization_name,
+	last_name as last_name,
+	first_name as first_name,
+	state as state_abbreviation,
+	taxonomy_code as taxonomy_code
+  from "airflow"."public"."npi_small"
+  );
+
+2020-10-08 04:52:38.435930 (Thread-1): SQL status: CREATE VIEW in 0.00 seconds
+2020-10-08 04:52:38.438485 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-10-08 04:52:38.438577 (Thread-1): On model.ge_tutorials.stg_npi: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_npi"} */
+alter table "airflow"."public"."stg_npi__dbt_tmp" rename to "stg_npi"
+2020-10-08 04:52:38.438888 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2020-10-08 04:52:38.439949 (Thread-1): On model.ge_tutorials.stg_npi: COMMIT
+2020-10-08 04:52:38.440070 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-10-08 04:52:38.440173 (Thread-1): On model.ge_tutorials.stg_npi: COMMIT
+2020-10-08 04:52:38.441134 (Thread-1): SQL status: COMMIT in 0.00 seconds
+2020-10-08 04:52:38.443002 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-10-08 04:52:38.443094 (Thread-1): On model.ge_tutorials.stg_npi: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_npi"} */
+drop view if exists "airflow"."public"."stg_npi__dbt_backup" cascade
+2020-10-08 04:52:38.443338 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 04:52:38.445836 (Thread-1): finished collecting timing info
+2020-10-08 04:52:38.446766 (Thread-1): 04:52:38 | 1 of 4 OK created view model public.stg_npi.......................... [CREATE VIEW in 0.08s]
+2020-10-08 04:52:38.446937 (Thread-1): Finished running node model.ge_tutorials.stg_npi
+2020-10-08 04:52:38.447111 (Thread-1): Began running node model.ge_tutorials.stg_state_abbreviations
+2020-10-08 04:52:38.447273 (Thread-1): 04:52:38 | 2 of 4 START view model public.stg_state_abbreviations............... [RUN]
+2020-10-08 04:52:38.447613 (Thread-1): Acquiring new postgres connection "model.ge_tutorials.stg_state_abbreviations".
+2020-10-08 04:52:38.447725 (Thread-1): Re-using an available connection from the pool (formerly model.ge_tutorials.stg_npi).
+2020-10-08 04:52:38.447830 (Thread-1): Compiling model.ge_tutorials.stg_state_abbreviations
+2020-10-08 04:52:38.456072 (Thread-1): Writing injected SQL for node "model.ge_tutorials.stg_state_abbreviations"
+2020-10-08 04:52:38.456266 (Thread-1): finished collecting timing info
+2020-10-08 04:52:38.464977 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_abbreviations".
+2020-10-08 04:52:38.465075 (Thread-1): On model.ge_tutorials.stg_state_abbreviations: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_state_abbreviations"} */
+drop view if exists "airflow"."public"."stg_state_abbreviations__dbt_tmp" cascade
+2020-10-08 04:52:38.465409 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 04:52:38.467750 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_abbreviations".
+2020-10-08 04:52:38.467871 (Thread-1): On model.ge_tutorials.stg_state_abbreviations: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_state_abbreviations"} */
+drop view if exists "airflow"."public"."stg_state_abbreviations__dbt_backup" cascade
+2020-10-08 04:52:38.468146 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 04:52:38.469925 (Thread-1): Writing runtime SQL for node "model.ge_tutorials.stg_state_abbreviations"
+2020-10-08 04:52:38.470133 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_abbreviations".
+2020-10-08 04:52:38.470215 (Thread-1): On model.ge_tutorials.stg_state_abbreviations: BEGIN
+2020-10-08 04:52:38.470396 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2020-10-08 04:52:38.470475 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_abbreviations".
+2020-10-08 04:52:38.470545 (Thread-1): On model.ge_tutorials.stg_state_abbreviations: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_state_abbreviations"} */
+
+  create view "airflow"."public"."stg_state_abbreviations__dbt_tmp" as (
+    select 
+	name as state_name,
+	abbreviation as state_abbreviation
+  from "airflow"."public"."state_abbreviations"
+  );
+
+2020-10-08 04:52:38.471119 (Thread-1): SQL status: CREATE VIEW in 0.00 seconds
+2020-10-08 04:52:38.473475 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_abbreviations".
+2020-10-08 04:52:38.473562 (Thread-1): On model.ge_tutorials.stg_state_abbreviations: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_state_abbreviations"} */
+alter table "airflow"."public"."stg_state_abbreviations__dbt_tmp" rename to "stg_state_abbreviations"
+2020-10-08 04:52:38.473842 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2020-10-08 04:52:38.474606 (Thread-1): On model.ge_tutorials.stg_state_abbreviations: COMMIT
+2020-10-08 04:52:38.474692 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_abbreviations".
+2020-10-08 04:52:38.474767 (Thread-1): On model.ge_tutorials.stg_state_abbreviations: COMMIT
+2020-10-08 04:52:38.475737 (Thread-1): SQL status: COMMIT in 0.00 seconds
+2020-10-08 04:52:38.477728 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_abbreviations".
+2020-10-08 04:52:38.477814 (Thread-1): On model.ge_tutorials.stg_state_abbreviations: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_state_abbreviations"} */
+drop view if exists "airflow"."public"."stg_state_abbreviations__dbt_backup" cascade
+2020-10-08 04:52:38.478035 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 04:52:38.480436 (Thread-1): finished collecting timing info
+2020-10-08 04:52:38.481046 (Thread-1): 04:52:38 | 2 of 4 OK created view model public.stg_state_abbreviations.......... [CREATE VIEW in 0.03s]
+2020-10-08 04:52:38.481164 (Thread-1): Finished running node model.ge_tutorials.stg_state_abbreviations
+2020-10-08 04:52:38.481497 (Thread-1): Began running node model.ge_tutorials.npi_with_state
+2020-10-08 04:52:38.481613 (Thread-1): 04:52:38 | 3 of 4 START view model public.npi_with_state........................ [RUN]
+2020-10-08 04:52:38.481834 (Thread-1): Acquiring new postgres connection "model.ge_tutorials.npi_with_state".
+2020-10-08 04:52:38.481908 (Thread-1): Re-using an available connection from the pool (formerly model.ge_tutorials.stg_state_abbreviations).
+2020-10-08 04:52:38.482008 (Thread-1): Compiling model.ge_tutorials.npi_with_state
+2020-10-08 04:52:38.491497 (Thread-1): Writing injected SQL for node "model.ge_tutorials.npi_with_state"
+2020-10-08 04:52:38.491684 (Thread-1): finished collecting timing info
+2020-10-08 04:52:38.499498 (Thread-1): Using postgres connection "model.ge_tutorials.npi_with_state".
+2020-10-08 04:52:38.499593 (Thread-1): On model.ge_tutorials.npi_with_state: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.npi_with_state"} */
+drop view if exists "airflow"."public"."npi_with_state__dbt_tmp" cascade
+2020-10-08 04:52:38.499872 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 04:52:38.502354 (Thread-1): Using postgres connection "model.ge_tutorials.npi_with_state".
+2020-10-08 04:52:38.502443 (Thread-1): On model.ge_tutorials.npi_with_state: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.npi_with_state"} */
+drop view if exists "airflow"."public"."npi_with_state__dbt_backup" cascade
+2020-10-08 04:52:38.502700 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 04:52:38.504408 (Thread-1): Writing runtime SQL for node "model.ge_tutorials.npi_with_state"
+2020-10-08 04:52:38.504691 (Thread-1): Using postgres connection "model.ge_tutorials.npi_with_state".
+2020-10-08 04:52:38.504806 (Thread-1): On model.ge_tutorials.npi_with_state: BEGIN
+2020-10-08 04:52:38.505026 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2020-10-08 04:52:38.505116 (Thread-1): Using postgres connection "model.ge_tutorials.npi_with_state".
+2020-10-08 04:52:38.505194 (Thread-1): On model.ge_tutorials.npi_with_state: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.npi_with_state"} */
+
+  create view "airflow"."public"."npi_with_state__dbt_tmp" as (
+    select 
+	n.npi,
+	n.entity_type_code,
+	n.organization_name,
+	n.last_name,
+	n.first_name,
+	n.taxonomy_code,
+	n.state_abbreviation,
+	s.state_name
+from "airflow"."public"."stg_npi" n
+-- due to the nature of the data some state abbreviations are not valid
+-- which results in state names being null  - in this case,
+-- switch to inner join
+inner join "airflow"."public"."stg_state_abbreviations" s
+	on n.state_abbreviation = s.state_abbreviation
+  );
+
+2020-10-08 04:52:38.506226 (Thread-1): SQL status: CREATE VIEW in 0.00 seconds
+2020-10-08 04:52:38.509783 (Thread-1): Using postgres connection "model.ge_tutorials.npi_with_state".
+2020-10-08 04:52:38.509874 (Thread-1): On model.ge_tutorials.npi_with_state: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.npi_with_state"} */
+alter table "airflow"."public"."npi_with_state__dbt_tmp" rename to "npi_with_state"
+2020-10-08 04:52:38.510186 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2020-10-08 04:52:38.511102 (Thread-1): On model.ge_tutorials.npi_with_state: COMMIT
+2020-10-08 04:52:38.511220 (Thread-1): Using postgres connection "model.ge_tutorials.npi_with_state".
+2020-10-08 04:52:38.511334 (Thread-1): On model.ge_tutorials.npi_with_state: COMMIT
+2020-10-08 04:52:38.512301 (Thread-1): SQL status: COMMIT in 0.00 seconds
+2020-10-08 04:52:38.514093 (Thread-1): Using postgres connection "model.ge_tutorials.npi_with_state".
+2020-10-08 04:52:38.514178 (Thread-1): On model.ge_tutorials.npi_with_state: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.npi_with_state"} */
+drop view if exists "airflow"."public"."npi_with_state__dbt_backup" cascade
+2020-10-08 04:52:38.514409 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 04:52:38.516811 (Thread-1): finished collecting timing info
+2020-10-08 04:52:38.517423 (Thread-1): 04:52:38 | 3 of 4 OK created view model public.npi_with_state................... [CREATE VIEW in 0.04s]
+2020-10-08 04:52:38.517542 (Thread-1): Finished running node model.ge_tutorials.npi_with_state
+2020-10-08 04:52:38.517900 (Thread-1): Began running node model.ge_tutorials.count_providers_by_state
+2020-10-08 04:52:38.518034 (Thread-1): 04:52:38 | 4 of 4 START view model public.count_providers_by_state.............. [RUN]
+2020-10-08 04:52:38.518301 (Thread-1): Acquiring new postgres connection "model.ge_tutorials.count_providers_by_state".
+2020-10-08 04:52:38.518389 (Thread-1): Re-using an available connection from the pool (formerly model.ge_tutorials.npi_with_state).
+2020-10-08 04:52:38.518478 (Thread-1): Compiling model.ge_tutorials.count_providers_by_state
+2020-10-08 04:52:38.526383 (Thread-1): Writing injected SQL for node "model.ge_tutorials.count_providers_by_state"
+2020-10-08 04:52:38.526609 (Thread-1): finished collecting timing info
+2020-10-08 04:52:38.534392 (Thread-1): Using postgres connection "model.ge_tutorials.count_providers_by_state".
+2020-10-08 04:52:38.534490 (Thread-1): On model.ge_tutorials.count_providers_by_state: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.count_providers_by_state"} */
+drop view if exists "airflow"."public"."count_providers_by_state__dbt_tmp" cascade
+2020-10-08 04:52:38.534792 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 04:52:38.537315 (Thread-1): Using postgres connection "model.ge_tutorials.count_providers_by_state".
+2020-10-08 04:52:38.537416 (Thread-1): On model.ge_tutorials.count_providers_by_state: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.count_providers_by_state"} */
+drop view if exists "airflow"."public"."count_providers_by_state__dbt_backup" cascade
+2020-10-08 04:52:38.537702 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 04:52:38.539545 (Thread-1): Writing runtime SQL for node "model.ge_tutorials.count_providers_by_state"
+2020-10-08 04:52:38.539846 (Thread-1): Using postgres connection "model.ge_tutorials.count_providers_by_state".
+2020-10-08 04:52:38.539956 (Thread-1): On model.ge_tutorials.count_providers_by_state: BEGIN
+2020-10-08 04:52:38.540277 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2020-10-08 04:52:38.540406 (Thread-1): Using postgres connection "model.ge_tutorials.count_providers_by_state".
+2020-10-08 04:52:38.540515 (Thread-1): On model.ge_tutorials.count_providers_by_state: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.count_providers_by_state"} */
+
+  create view "airflow"."public"."count_providers_by_state__dbt_tmp" as (
+    select 
+	state_name,
+	count(distinct npi) as count_providers
+from "airflow"."public"."npi_with_state" n
+group by state_name
+  );
+
+2020-10-08 04:52:38.541910 (Thread-1): SQL status: CREATE VIEW in 0.00 seconds
+2020-10-08 04:52:38.545229 (Thread-1): Using postgres connection "model.ge_tutorials.count_providers_by_state".
+2020-10-08 04:52:38.545373 (Thread-1): On model.ge_tutorials.count_providers_by_state: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.count_providers_by_state"} */
+alter table "airflow"."public"."count_providers_by_state__dbt_tmp" rename to "count_providers_by_state"
+2020-10-08 04:52:38.545878 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2020-10-08 04:52:38.547063 (Thread-1): On model.ge_tutorials.count_providers_by_state: COMMIT
+2020-10-08 04:52:38.547190 (Thread-1): Using postgres connection "model.ge_tutorials.count_providers_by_state".
+2020-10-08 04:52:38.547298 (Thread-1): On model.ge_tutorials.count_providers_by_state: COMMIT
+2020-10-08 04:52:38.548415 (Thread-1): SQL status: COMMIT in 0.00 seconds
+2020-10-08 04:52:38.551626 (Thread-1): Using postgres connection "model.ge_tutorials.count_providers_by_state".
+2020-10-08 04:52:38.551788 (Thread-1): On model.ge_tutorials.count_providers_by_state: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.count_providers_by_state"} */
+drop view if exists "airflow"."public"."count_providers_by_state__dbt_backup" cascade
+2020-10-08 04:52:38.552212 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 04:52:38.556396 (Thread-1): finished collecting timing info
+2020-10-08 04:52:38.557337 (Thread-1): 04:52:38 | 4 of 4 OK created view model public.count_providers_by_state......... [CREATE VIEW in 0.04s]
+2020-10-08 04:52:38.557556 (Thread-1): Finished running node model.ge_tutorials.count_providers_by_state
+2020-10-08 04:52:38.566106 (MainThread): Using postgres connection "master".
+2020-10-08 04:52:38.566363 (MainThread): On master: BEGIN
+2020-10-08 04:52:38.566774 (MainThread): SQL status: BEGIN in 0.00 seconds
+2020-10-08 04:52:38.566974 (MainThread): On master: COMMIT
+2020-10-08 04:52:38.567144 (MainThread): Using postgres connection "master".
+2020-10-08 04:52:38.567323 (MainThread): On master: COMMIT
+2020-10-08 04:52:38.567646 (MainThread): SQL status: COMMIT in 0.00 seconds
+2020-10-08 04:52:38.568187 (MainThread): 04:52:38 | 
+2020-10-08 04:52:38.568422 (MainThread): 04:52:38 | Finished running 4 view models in 0.50s.
+2020-10-08 04:52:38.568629 (MainThread): Connection 'master' was left open.
+2020-10-08 04:52:38.568797 (MainThread): On master: Close
+2020-10-08 04:52:38.569022 (MainThread): Connection 'model.ge_tutorials.count_providers_by_state' was left open.
+2020-10-08 04:52:38.569188 (MainThread): On model.ge_tutorials.count_providers_by_state: Close
+2020-10-08 04:52:38.597873 (MainThread): 
+2020-10-08 04:52:38.598189 (MainThread): Completed successfully
+2020-10-08 04:52:38.598440 (MainThread): 
+Done. PASS=4 WARN=0 ERROR=0 SKIP=0 TOTAL=4
+2020-10-08 04:52:38.598785 (MainThread): Flushing usage events
+2020-10-08 05:11:57.691262 (MainThread): Got an exception trying to initialize tracking
+2020-10-08 05:11:57.691414 (MainThread): Running with dbt=0.16.0
+2020-10-08 05:11:57.766781 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, exclude=None, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='/usr/local/airflow/.dbt', project_dir='/usr/local/airflow/dbt', record_timing_info=None, rpc_method='run', single_threaded=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2020-10-08 05:11:57.767166 (MainThread): Tracking: do not track
+2020-10-08 05:11:57.797899 (MainThread): Partial parsing not enabled
+2020-10-08 05:11:57.800820 (MainThread): Parsing macros/core.sql
+2020-10-08 05:11:57.808006 (MainThread): Parsing macros/materializations/helpers.sql
+2020-10-08 05:11:57.820986 (MainThread): Parsing macros/materializations/table/table.sql
+2020-10-08 05:11:57.831851 (MainThread): Parsing macros/materializations/common/merge.sql
+2020-10-08 05:11:57.854052 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-10-08 05:11:57.861806 (MainThread): Parsing macros/materializations/view/view.sql
+2020-10-08 05:11:57.872143 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2020-10-08 05:11:57.930223 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2020-10-08 05:11:57.956660 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-10-08 05:11:57.959296 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2020-10-08 05:11:57.968885 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2020-10-08 05:11:57.971724 (MainThread): Parsing macros/materializations/seed/seed.sql
+2020-10-08 05:11:58.007095 (MainThread): Parsing macros/schema_tests/relationships.sql
+2020-10-08 05:11:58.008802 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2020-10-08 05:11:58.011857 (MainThread): Parsing macros/schema_tests/not_null.sql
+2020-10-08 05:11:58.013145 (MainThread): Parsing macros/schema_tests/unique.sql
+2020-10-08 05:11:58.014731 (MainThread): Parsing macros/etc/query.sql
+2020-10-08 05:11:58.016255 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2020-10-08 05:11:58.019241 (MainThread): Parsing macros/etc/get_custom_database.sql
+2020-10-08 05:11:58.020779 (MainThread): Parsing macros/etc/datetime.sql
+2020-10-08 05:11:58.035728 (MainThread): Parsing macros/etc/get_relation_comment.sql
+2020-10-08 05:11:58.038731 (MainThread): Parsing macros/etc/is_incremental.sql
+2020-10-08 05:11:58.041177 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2020-10-08 05:11:58.042604 (MainThread): Parsing macros/adapters/common.sql
+2020-10-08 05:11:58.121066 (MainThread): Parsing macros/relations.sql
+2020-10-08 05:11:58.123708 (MainThread): Parsing macros/adapters.sql
+2020-10-08 05:11:58.155211 (MainThread): Parsing macros/catalog.sql
+2020-10-08 05:11:58.159442 (MainThread): Parsing macros/materializations/snapshot_merge.sql
+2020-10-08 05:11:58.189257 (MainThread): Partial parsing not enabled
+2020-10-08 05:11:58.237659 (MainThread): Acquiring new postgres connection "model.ge_tutorials.npi_with_state".
+2020-10-08 05:11:58.237829 (MainThread): Opening a new connection, currently in state init
+2020-10-08 05:11:58.267583 (MainThread): Acquiring new postgres connection "model.ge_tutorials.count_providers_by_state".
+2020-10-08 05:11:58.267771 (MainThread): Opening a new connection, currently in state init
+2020-10-08 05:11:58.278741 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_state_abbreviations".
+2020-10-08 05:11:58.278959 (MainThread): Opening a new connection, currently in state init
+2020-10-08 05:11:58.289697 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_npi".
+2020-10-08 05:11:58.289870 (MainThread): Opening a new connection, currently in state init
+2020-10-08 05:11:58.754131 (MainThread): Found 4 models, 0 tests, 0 snapshots, 0 analyses, 127 macros, 0 operations, 0 seed files, 2 sources
+2020-10-08 05:11:58.759084 (MainThread): 
+2020-10-08 05:11:58.759532 (MainThread): Acquiring new postgres connection "master".
+2020-10-08 05:11:58.759708 (MainThread): Opening a new connection, currently in state init
+2020-10-08 05:11:58.784478 (ThreadPoolExecutor-0_0): Acquiring new postgres connection "list_airflow".
+2020-10-08 05:11:58.784746 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2020-10-08 05:11:58.913132 (ThreadPoolExecutor-0_0): Using postgres connection "list_airflow".
+2020-10-08 05:11:58.913275 (ThreadPoolExecutor-0_0): On list_airflow: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "connection_name": "list_airflow"} */
+
+    select distinct nspname from pg_namespace
+  
+2020-10-08 05:11:58.916723 (ThreadPoolExecutor-0_0): SQL status: SELECT 6 in 0.00 seconds
+2020-10-08 05:11:58.939451 (ThreadPoolExecutor-1_0): Acquiring new postgres connection "list_airflow_public".
+2020-10-08 05:11:58.939602 (ThreadPoolExecutor-1_0): Re-using an available connection from the pool (formerly list_airflow).
+2020-10-08 05:11:58.941517 (ThreadPoolExecutor-1_0): Using postgres connection "list_airflow_public".
+2020-10-08 05:11:58.941628 (ThreadPoolExecutor-1_0): On list_airflow_public: BEGIN
+2020-10-08 05:11:58.941987 (ThreadPoolExecutor-1_0): SQL status: BEGIN in 0.00 seconds
+2020-10-08 05:11:58.942093 (ThreadPoolExecutor-1_0): Using postgres connection "list_airflow_public".
+2020-10-08 05:11:58.942175 (ThreadPoolExecutor-1_0): On list_airflow_public: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "connection_name": "list_airflow_public"} */
+select
+      'airflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'airflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+2020-10-08 05:11:58.944410 (ThreadPoolExecutor-1_0): SQL status: SELECT 25 in 0.00 seconds
+2020-10-08 05:11:58.969652 (ThreadPoolExecutor-1_0): On list_airflow_public: ROLLBACK
+2020-10-08 05:11:58.995541 (MainThread): Using postgres connection "master".
+2020-10-08 05:11:58.995690 (MainThread): On master: BEGIN
+2020-10-08 05:11:58.998767 (MainThread): SQL status: BEGIN in 0.00 seconds
+2020-10-08 05:11:58.998914 (MainThread): Using postgres connection "master".
+2020-10-08 05:11:58.999006 (MainThread): On master: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+2020-10-08 05:11:59.004571 (MainThread): SQL status: SELECT 0 in 0.01 seconds
+2020-10-08 05:11:59.005687 (MainThread): On master: ROLLBACK
+2020-10-08 05:11:59.005987 (MainThread): Using postgres connection "master".
+2020-10-08 05:11:59.006097 (MainThread): On master: BEGIN
+2020-10-08 05:11:59.006550 (MainThread): SQL status: BEGIN in 0.00 seconds
+2020-10-08 05:11:59.006672 (MainThread): On master: COMMIT
+2020-10-08 05:11:59.006770 (MainThread): Using postgres connection "master".
+2020-10-08 05:11:59.006857 (MainThread): On master: COMMIT
+2020-10-08 05:11:59.007110 (MainThread): SQL status: COMMIT in 0.00 seconds
+2020-10-08 05:11:59.007432 (MainThread): 05:11:59 | Concurrency: 1 threads (target='dev')
+2020-10-08 05:11:59.007566 (MainThread): 05:11:59 | 
+2020-10-08 05:11:59.013817 (Thread-1): Began running node model.ge_tutorials.stg_npi
+2020-10-08 05:11:59.014011 (Thread-1): 05:11:59 | 1 of 4 START view model public.stg_npi............................... [RUN]
+2020-10-08 05:11:59.014348 (Thread-1): Acquiring new postgres connection "model.ge_tutorials.stg_npi".
+2020-10-08 05:11:59.014439 (Thread-1): Re-using an available connection from the pool (formerly list_airflow_public).
+2020-10-08 05:11:59.014539 (Thread-1): Compiling model.ge_tutorials.stg_npi
+2020-10-08 05:11:59.046437 (Thread-1): Writing injected SQL for node "model.ge_tutorials.stg_npi"
+2020-10-08 05:11:59.046885 (Thread-1): finished collecting timing info
+2020-10-08 05:11:59.125449 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-10-08 05:11:59.125677 (Thread-1): On model.ge_tutorials.stg_npi: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_npi"} */
+drop view if exists "airflow"."public"."stg_npi__dbt_tmp" cascade
+2020-10-08 05:11:59.126259 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 05:11:59.130745 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-10-08 05:11:59.130904 (Thread-1): On model.ge_tutorials.stg_npi: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_npi"} */
+drop view if exists "airflow"."public"."stg_npi__dbt_backup" cascade
+2020-10-08 05:11:59.131254 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 05:11:59.134072 (Thread-1): Writing runtime SQL for node "model.ge_tutorials.stg_npi"
+2020-10-08 05:11:59.134499 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-10-08 05:11:59.134639 (Thread-1): On model.ge_tutorials.stg_npi: BEGIN
+2020-10-08 05:11:59.134930 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2020-10-08 05:11:59.135263 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-10-08 05:11:59.135405 (Thread-1): On model.ge_tutorials.stg_npi: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_npi"} */
+
+  create view "airflow"."public"."stg_npi__dbt_tmp" as (
+    select 
+	npi as npi,
+	entity_type_code as entity_type_code,
+	organization_name as organization_name,
+	last_name as last_name,
+	first_name as first_name,
+	state as state_abbreviation,
+	taxonomy_code as taxonomy_code
+  from "airflow"."public"."npi_small"
+  );
+
+2020-10-08 05:11:59.137420 (Thread-1): SQL status: CREATE VIEW in 0.00 seconds
+2020-10-08 05:11:59.142779 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-10-08 05:11:59.142964 (Thread-1): On model.ge_tutorials.stg_npi: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_npi"} */
+alter table "airflow"."public"."stg_npi__dbt_tmp" rename to "stg_npi"
+2020-10-08 05:11:59.145323 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2020-10-08 05:11:59.147097 (Thread-1): On model.ge_tutorials.stg_npi: COMMIT
+2020-10-08 05:11:59.147266 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-10-08 05:11:59.147407 (Thread-1): On model.ge_tutorials.stg_npi: COMMIT
+2020-10-08 05:11:59.148473 (Thread-1): SQL status: COMMIT in 0.00 seconds
+2020-10-08 05:11:59.151979 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-10-08 05:11:59.152131 (Thread-1): On model.ge_tutorials.stg_npi: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_npi"} */
+drop view if exists "airflow"."public"."stg_npi__dbt_backup" cascade
+2020-10-08 05:11:59.152466 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 05:11:59.157396 (Thread-1): finished collecting timing info
+2020-10-08 05:11:59.158930 (Thread-1): 05:11:59 | 1 of 4 OK created view model public.stg_npi.......................... [CREATE VIEW in 0.14s]
+2020-10-08 05:11:59.159167 (Thread-1): Finished running node model.ge_tutorials.stg_npi
+2020-10-08 05:11:59.159413 (Thread-1): Began running node model.ge_tutorials.stg_state_abbreviations
+2020-10-08 05:11:59.159628 (Thread-1): 05:11:59 | 2 of 4 START view model public.stg_state_abbreviations............... [RUN]
+2020-10-08 05:11:59.160138 (Thread-1): Acquiring new postgres connection "model.ge_tutorials.stg_state_abbreviations".
+2020-10-08 05:11:59.160278 (Thread-1): Re-using an available connection from the pool (formerly model.ge_tutorials.stg_npi).
+2020-10-08 05:11:59.160421 (Thread-1): Compiling model.ge_tutorials.stg_state_abbreviations
+2020-10-08 05:11:59.169606 (Thread-1): Writing injected SQL for node "model.ge_tutorials.stg_state_abbreviations"
+2020-10-08 05:11:59.169899 (Thread-1): finished collecting timing info
+2020-10-08 05:11:59.180045 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_abbreviations".
+2020-10-08 05:11:59.180183 (Thread-1): On model.ge_tutorials.stg_state_abbreviations: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_state_abbreviations"} */
+drop view if exists "airflow"."public"."stg_state_abbreviations__dbt_tmp" cascade
+2020-10-08 05:11:59.180563 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 05:11:59.183470 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_abbreviations".
+2020-10-08 05:11:59.183597 (Thread-1): On model.ge_tutorials.stg_state_abbreviations: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_state_abbreviations"} */
+drop view if exists "airflow"."public"."stg_state_abbreviations__dbt_backup" cascade
+2020-10-08 05:11:59.183951 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 05:11:59.185790 (Thread-1): Writing runtime SQL for node "model.ge_tutorials.stg_state_abbreviations"
+2020-10-08 05:11:59.186101 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_abbreviations".
+2020-10-08 05:11:59.186204 (Thread-1): On model.ge_tutorials.stg_state_abbreviations: BEGIN
+2020-10-08 05:11:59.186492 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2020-10-08 05:11:59.186605 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_abbreviations".
+2020-10-08 05:11:59.186697 (Thread-1): On model.ge_tutorials.stg_state_abbreviations: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_state_abbreviations"} */
+
+  create view "airflow"."public"."stg_state_abbreviations__dbt_tmp" as (
+    select 
+	name as state_name,
+	abbreviation as state_abbreviation
+  from "airflow"."public"."state_abbreviations"
+  );
+
+2020-10-08 05:11:59.187423 (Thread-1): SQL status: CREATE VIEW in 0.00 seconds
+2020-10-08 05:11:59.191920 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_abbreviations".
+2020-10-08 05:11:59.192090 (Thread-1): On model.ge_tutorials.stg_state_abbreviations: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_state_abbreviations"} */
+alter table "airflow"."public"."stg_state_abbreviations__dbt_tmp" rename to "stg_state_abbreviations"
+2020-10-08 05:11:59.192543 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2020-10-08 05:11:59.193958 (Thread-1): On model.ge_tutorials.stg_state_abbreviations: COMMIT
+2020-10-08 05:11:59.194108 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_abbreviations".
+2020-10-08 05:11:59.194243 (Thread-1): On model.ge_tutorials.stg_state_abbreviations: COMMIT
+2020-10-08 05:11:59.195268 (Thread-1): SQL status: COMMIT in 0.00 seconds
+2020-10-08 05:11:59.198558 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_abbreviations".
+2020-10-08 05:11:59.198720 (Thread-1): On model.ge_tutorials.stg_state_abbreviations: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_state_abbreviations"} */
+drop view if exists "airflow"."public"."stg_state_abbreviations__dbt_backup" cascade
+2020-10-08 05:11:59.199104 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 05:11:59.203486 (Thread-1): finished collecting timing info
+2020-10-08 05:11:59.204581 (Thread-1): 05:11:59 | 2 of 4 OK created view model public.stg_state_abbreviations.......... [CREATE VIEW in 0.04s]
+2020-10-08 05:11:59.204781 (Thread-1): Finished running node model.ge_tutorials.stg_state_abbreviations
+2020-10-08 05:11:59.205275 (Thread-1): Began running node model.ge_tutorials.npi_with_state
+2020-10-08 05:11:59.205479 (Thread-1): 05:11:59 | 3 of 4 START view model public.npi_with_state........................ [RUN]
+2020-10-08 05:11:59.205860 (Thread-1): Acquiring new postgres connection "model.ge_tutorials.npi_with_state".
+2020-10-08 05:11:59.205987 (Thread-1): Re-using an available connection from the pool (formerly model.ge_tutorials.stg_state_abbreviations).
+2020-10-08 05:11:59.206115 (Thread-1): Compiling model.ge_tutorials.npi_with_state
+2020-10-08 05:11:59.219295 (Thread-1): Writing injected SQL for node "model.ge_tutorials.npi_with_state"
+2020-10-08 05:11:59.219669 (Thread-1): finished collecting timing info
+2020-10-08 05:11:59.228842 (Thread-1): Using postgres connection "model.ge_tutorials.npi_with_state".
+2020-10-08 05:11:59.228986 (Thread-1): On model.ge_tutorials.npi_with_state: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.npi_with_state"} */
+drop view if exists "airflow"."public"."npi_with_state__dbt_tmp" cascade
+2020-10-08 05:11:59.229382 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 05:11:59.232388 (Thread-1): Using postgres connection "model.ge_tutorials.npi_with_state".
+2020-10-08 05:11:59.232501 (Thread-1): On model.ge_tutorials.npi_with_state: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.npi_with_state"} */
+drop view if exists "airflow"."public"."npi_with_state__dbt_backup" cascade
+2020-10-08 05:11:59.232809 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 05:11:59.234698 (Thread-1): Writing runtime SQL for node "model.ge_tutorials.npi_with_state"
+2020-10-08 05:11:59.235008 (Thread-1): Using postgres connection "model.ge_tutorials.npi_with_state".
+2020-10-08 05:11:59.235109 (Thread-1): On model.ge_tutorials.npi_with_state: BEGIN
+2020-10-08 05:11:59.235360 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2020-10-08 05:11:59.235459 (Thread-1): Using postgres connection "model.ge_tutorials.npi_with_state".
+2020-10-08 05:11:59.235544 (Thread-1): On model.ge_tutorials.npi_with_state: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.npi_with_state"} */
+
+  create view "airflow"."public"."npi_with_state__dbt_tmp" as (
+    select 
+	n.npi,
+	n.entity_type_code,
+	n.organization_name,
+	n.last_name,
+	n.first_name,
+	n.taxonomy_code,
+	n.state_abbreviation,
+	s.state_name
+from "airflow"."public"."stg_npi" n
+-- due to the nature of the data some state abbreviations are not valid
+-- which results in state names being null  - in this case,
+-- switch to inner join
+inner join "airflow"."public"."stg_state_abbreviations" s
+	on n.state_abbreviation = s.state_abbreviation
+  );
+
+2020-10-08 05:11:59.236671 (Thread-1): SQL status: CREATE VIEW in 0.00 seconds
+2020-10-08 05:11:59.241493 (Thread-1): Using postgres connection "model.ge_tutorials.npi_with_state".
+2020-10-08 05:11:59.241649 (Thread-1): On model.ge_tutorials.npi_with_state: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.npi_with_state"} */
+alter table "airflow"."public"."npi_with_state__dbt_tmp" rename to "npi_with_state"
+2020-10-08 05:11:59.242223 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2020-10-08 05:11:59.243345 (Thread-1): On model.ge_tutorials.npi_with_state: COMMIT
+2020-10-08 05:11:59.243458 (Thread-1): Using postgres connection "model.ge_tutorials.npi_with_state".
+2020-10-08 05:11:59.243553 (Thread-1): On model.ge_tutorials.npi_with_state: COMMIT
+2020-10-08 05:11:59.244722 (Thread-1): SQL status: COMMIT in 0.00 seconds
+2020-10-08 05:11:59.247135 (Thread-1): Using postgres connection "model.ge_tutorials.npi_with_state".
+2020-10-08 05:11:59.247263 (Thread-1): On model.ge_tutorials.npi_with_state: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.npi_with_state"} */
+drop view if exists "airflow"."public"."npi_with_state__dbt_backup" cascade
+2020-10-08 05:11:59.247629 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 05:11:59.250762 (Thread-1): finished collecting timing info
+2020-10-08 05:11:59.251612 (Thread-1): 05:11:59 | 3 of 4 OK created view model public.npi_with_state................... [CREATE VIEW in 0.05s]
+2020-10-08 05:11:59.251767 (Thread-1): Finished running node model.ge_tutorials.npi_with_state
+2020-10-08 05:11:59.252203 (Thread-1): Began running node model.ge_tutorials.count_providers_by_state
+2020-10-08 05:11:59.252364 (Thread-1): 05:11:59 | 4 of 4 START view model public.count_providers_by_state.............. [RUN]
+2020-10-08 05:11:59.252666 (Thread-1): Acquiring new postgres connection "model.ge_tutorials.count_providers_by_state".
+2020-10-08 05:11:59.252759 (Thread-1): Re-using an available connection from the pool (formerly model.ge_tutorials.npi_with_state).
+2020-10-08 05:11:59.252854 (Thread-1): Compiling model.ge_tutorials.count_providers_by_state
+2020-10-08 05:11:59.262277 (Thread-1): Writing injected SQL for node "model.ge_tutorials.count_providers_by_state"
+2020-10-08 05:11:59.262617 (Thread-1): finished collecting timing info
+2020-10-08 05:11:59.272602 (Thread-1): Using postgres connection "model.ge_tutorials.count_providers_by_state".
+2020-10-08 05:11:59.272774 (Thread-1): On model.ge_tutorials.count_providers_by_state: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.count_providers_by_state"} */
+drop view if exists "airflow"."public"."count_providers_by_state__dbt_tmp" cascade
+2020-10-08 05:11:59.273197 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 05:11:59.276654 (Thread-1): Using postgres connection "model.ge_tutorials.count_providers_by_state".
+2020-10-08 05:11:59.276822 (Thread-1): On model.ge_tutorials.count_providers_by_state: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.count_providers_by_state"} */
+drop view if exists "airflow"."public"."count_providers_by_state__dbt_backup" cascade
+2020-10-08 05:11:59.277236 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 05:11:59.279497 (Thread-1): Writing runtime SQL for node "model.ge_tutorials.count_providers_by_state"
+2020-10-08 05:11:59.279905 (Thread-1): Using postgres connection "model.ge_tutorials.count_providers_by_state".
+2020-10-08 05:11:59.280027 (Thread-1): On model.ge_tutorials.count_providers_by_state: BEGIN
+2020-10-08 05:11:59.280376 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2020-10-08 05:11:59.280514 (Thread-1): Using postgres connection "model.ge_tutorials.count_providers_by_state".
+2020-10-08 05:11:59.280624 (Thread-1): On model.ge_tutorials.count_providers_by_state: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.count_providers_by_state"} */
+
+  create view "airflow"."public"."count_providers_by_state__dbt_tmp" as (
+    select 
+	state_name,
+	count(distinct npi) as count_providers
+from "airflow"."public"."npi_with_state" n
+group by state_name
+  );
+
+2020-10-08 05:11:59.282550 (Thread-1): SQL status: CREATE VIEW in 0.00 seconds
+2020-10-08 05:11:59.286709 (Thread-1): Using postgres connection "model.ge_tutorials.count_providers_by_state".
+2020-10-08 05:11:59.286906 (Thread-1): On model.ge_tutorials.count_providers_by_state: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.count_providers_by_state"} */
+alter table "airflow"."public"."count_providers_by_state__dbt_tmp" rename to "count_providers_by_state"
+2020-10-08 05:11:59.287564 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2020-10-08 05:11:59.288936 (Thread-1): On model.ge_tutorials.count_providers_by_state: COMMIT
+2020-10-08 05:11:59.289082 (Thread-1): Using postgres connection "model.ge_tutorials.count_providers_by_state".
+2020-10-08 05:11:59.289200 (Thread-1): On model.ge_tutorials.count_providers_by_state: COMMIT
+2020-10-08 05:11:59.290303 (Thread-1): SQL status: COMMIT in 0.00 seconds
+2020-10-08 05:11:59.293417 (Thread-1): Using postgres connection "model.ge_tutorials.count_providers_by_state".
+2020-10-08 05:11:59.293597 (Thread-1): On model.ge_tutorials.count_providers_by_state: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.count_providers_by_state"} */
+drop view if exists "airflow"."public"."count_providers_by_state__dbt_backup" cascade
+2020-10-08 05:11:59.294021 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 05:11:59.297996 (Thread-1): finished collecting timing info
+2020-10-08 05:11:59.299028 (Thread-1): 05:11:59 | 4 of 4 OK created view model public.count_providers_by_state......... [CREATE VIEW in 0.05s]
+2020-10-08 05:11:59.299223 (Thread-1): Finished running node model.ge_tutorials.count_providers_by_state
+2020-10-08 05:11:59.320394 (MainThread): Using postgres connection "master".
+2020-10-08 05:11:59.320638 (MainThread): On master: BEGIN
+2020-10-08 05:11:59.321025 (MainThread): SQL status: BEGIN in 0.00 seconds
+2020-10-08 05:11:59.321219 (MainThread): On master: COMMIT
+2020-10-08 05:11:59.321380 (MainThread): Using postgres connection "master".
+2020-10-08 05:11:59.321533 (MainThread): On master: COMMIT
+2020-10-08 05:11:59.321836 (MainThread): SQL status: COMMIT in 0.00 seconds
+2020-10-08 05:11:59.322372 (MainThread): 05:11:59 | 
+2020-10-08 05:11:59.322600 (MainThread): 05:11:59 | Finished running 4 view models in 0.56s.
+2020-10-08 05:11:59.322799 (MainThread): Connection 'master' was left open.
+2020-10-08 05:11:59.322967 (MainThread): On master: Close
+2020-10-08 05:11:59.323188 (MainThread): Connection 'model.ge_tutorials.count_providers_by_state' was left open.
+2020-10-08 05:11:59.323361 (MainThread): On model.ge_tutorials.count_providers_by_state: Close
+2020-10-08 05:11:59.349994 (MainThread): 
+2020-10-08 05:11:59.350209 (MainThread): Completed successfully
+2020-10-08 05:11:59.350367 (MainThread): 
+Done. PASS=4 WARN=0 ERROR=0 SKIP=0 TOTAL=4
+2020-10-08 05:11:59.350587 (MainThread): Flushing usage events
+2020-10-08 05:36:38.747465 (MainThread): Got an exception trying to initialize tracking
+2020-10-08 05:36:38.747620 (MainThread): Running with dbt=0.16.0
+2020-10-08 05:36:38.920311 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, exclude=None, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='/usr/local/airflow/.dbt', project_dir='/usr/local/airflow/dbt', record_timing_info=None, rpc_method='run', single_threaded=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2020-10-08 05:36:38.920699 (MainThread): Tracking: do not track
+2020-10-08 05:36:38.966100 (MainThread): Partial parsing not enabled
+2020-10-08 05:36:38.968857 (MainThread): Parsing macros/core.sql
+2020-10-08 05:36:38.979255 (MainThread): Parsing macros/materializations/helpers.sql
+2020-10-08 05:36:38.997871 (MainThread): Parsing macros/materializations/table/table.sql
+2020-10-08 05:36:39.013512 (MainThread): Parsing macros/materializations/common/merge.sql
+2020-10-08 05:36:39.043054 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-10-08 05:36:39.052472 (MainThread): Parsing macros/materializations/view/view.sql
+2020-10-08 05:36:39.065085 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2020-10-08 05:36:39.133798 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2020-10-08 05:36:39.167461 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-10-08 05:36:39.170766 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2020-10-08 05:36:39.182936 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2020-10-08 05:36:39.186528 (MainThread): Parsing macros/materializations/seed/seed.sql
+2020-10-08 05:36:39.235236 (MainThread): Parsing macros/schema_tests/relationships.sql
+2020-10-08 05:36:39.238021 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2020-10-08 05:36:39.242077 (MainThread): Parsing macros/schema_tests/not_null.sql
+2020-10-08 05:36:39.243784 (MainThread): Parsing macros/schema_tests/unique.sql
+2020-10-08 05:36:39.245708 (MainThread): Parsing macros/etc/query.sql
+2020-10-08 05:36:39.247450 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2020-10-08 05:36:39.250960 (MainThread): Parsing macros/etc/get_custom_database.sql
+2020-10-08 05:36:39.252706 (MainThread): Parsing macros/etc/datetime.sql
+2020-10-08 05:36:39.270374 (MainThread): Parsing macros/etc/get_relation_comment.sql
+2020-10-08 05:36:39.273746 (MainThread): Parsing macros/etc/is_incremental.sql
+2020-10-08 05:36:39.276403 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2020-10-08 05:36:39.277776 (MainThread): Parsing macros/adapters/common.sql
+2020-10-08 05:36:39.360146 (MainThread): Parsing macros/relations.sql
+2020-10-08 05:36:39.362954 (MainThread): Parsing macros/adapters.sql
+2020-10-08 05:36:39.394071 (MainThread): Parsing macros/catalog.sql
+2020-10-08 05:36:39.398079 (MainThread): Parsing macros/materializations/snapshot_merge.sql
+2020-10-08 05:36:39.426044 (MainThread): Partial parsing not enabled
+2020-10-08 05:36:39.473129 (MainThread): Acquiring new postgres connection "model.ge_tutorials.npi_with_state".
+2020-10-08 05:36:39.473292 (MainThread): Opening a new connection, currently in state init
+2020-10-08 05:36:39.501378 (MainThread): Acquiring new postgres connection "model.ge_tutorials.count_providers_by_state".
+2020-10-08 05:36:39.501551 (MainThread): Opening a new connection, currently in state init
+2020-10-08 05:36:39.511366 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_state_abbreviations".
+2020-10-08 05:36:39.511544 (MainThread): Opening a new connection, currently in state init
+2020-10-08 05:36:39.522111 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_npi".
+2020-10-08 05:36:39.522292 (MainThread): Opening a new connection, currently in state init
+2020-10-08 05:36:40.108965 (MainThread): Found 4 models, 0 tests, 0 snapshots, 0 analyses, 127 macros, 0 operations, 0 seed files, 2 sources
+2020-10-08 05:36:40.114067 (MainThread): 
+2020-10-08 05:36:40.114516 (MainThread): Acquiring new postgres connection "master".
+2020-10-08 05:36:40.114642 (MainThread): Opening a new connection, currently in state init
+2020-10-08 05:36:40.139921 (ThreadPoolExecutor-0_0): Acquiring new postgres connection "list_airflow".
+2020-10-08 05:36:40.140098 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2020-10-08 05:36:40.267658 (ThreadPoolExecutor-0_0): Using postgres connection "list_airflow".
+2020-10-08 05:36:40.267800 (ThreadPoolExecutor-0_0): On list_airflow: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "connection_name": "list_airflow"} */
+
+    select distinct nspname from pg_namespace
+  
+2020-10-08 05:36:40.272426 (ThreadPoolExecutor-0_0): SQL status: SELECT 6 in 0.00 seconds
+2020-10-08 05:36:40.298049 (ThreadPoolExecutor-1_0): Acquiring new postgres connection "list_airflow_public".
+2020-10-08 05:36:40.298206 (ThreadPoolExecutor-1_0): Re-using an available connection from the pool (formerly list_airflow).
+2020-10-08 05:36:40.300351 (ThreadPoolExecutor-1_0): Using postgres connection "list_airflow_public".
+2020-10-08 05:36:40.300471 (ThreadPoolExecutor-1_0): On list_airflow_public: BEGIN
+2020-10-08 05:36:40.300794 (ThreadPoolExecutor-1_0): SQL status: BEGIN in 0.00 seconds
+2020-10-08 05:36:40.300915 (ThreadPoolExecutor-1_0): Using postgres connection "list_airflow_public".
+2020-10-08 05:36:40.301010 (ThreadPoolExecutor-1_0): On list_airflow_public: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "connection_name": "list_airflow_public"} */
+select
+      'airflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'airflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+2020-10-08 05:36:40.303327 (ThreadPoolExecutor-1_0): SQL status: SELECT 25 in 0.00 seconds
+2020-10-08 05:36:40.333939 (ThreadPoolExecutor-1_0): On list_airflow_public: ROLLBACK
+2020-10-08 05:36:40.369555 (MainThread): Using postgres connection "master".
+2020-10-08 05:36:40.369838 (MainThread): On master: BEGIN
+2020-10-08 05:36:40.373576 (MainThread): SQL status: BEGIN in 0.00 seconds
+2020-10-08 05:36:40.373814 (MainThread): Using postgres connection "master".
+2020-10-08 05:36:40.373945 (MainThread): On master: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+2020-10-08 05:36:40.380844 (MainThread): SQL status: SELECT 0 in 0.01 seconds
+2020-10-08 05:36:40.382232 (MainThread): On master: ROLLBACK
+2020-10-08 05:36:40.382524 (MainThread): Using postgres connection "master".
+2020-10-08 05:36:40.382666 (MainThread): On master: BEGIN
+2020-10-08 05:36:40.383129 (MainThread): SQL status: BEGIN in 0.00 seconds
+2020-10-08 05:36:40.383287 (MainThread): On master: COMMIT
+2020-10-08 05:36:40.383434 (MainThread): Using postgres connection "master".
+2020-10-08 05:36:40.383548 (MainThread): On master: COMMIT
+2020-10-08 05:36:40.383850 (MainThread): SQL status: COMMIT in 0.00 seconds
+2020-10-08 05:36:40.384244 (MainThread): 05:36:40 | Concurrency: 1 threads (target='dev')
+2020-10-08 05:36:40.384421 (MainThread): 05:36:40 | 
+2020-10-08 05:36:40.392183 (Thread-1): Began running node model.ge_tutorials.stg_npi
+2020-10-08 05:36:40.392435 (Thread-1): 05:36:40 | 1 of 4 START view model public.stg_npi............................... [RUN]
+2020-10-08 05:36:40.392903 (Thread-1): Acquiring new postgres connection "model.ge_tutorials.stg_npi".
+2020-10-08 05:36:40.393025 (Thread-1): Re-using an available connection from the pool (formerly list_airflow_public).
+2020-10-08 05:36:40.393155 (Thread-1): Compiling model.ge_tutorials.stg_npi
+2020-10-08 05:36:40.419062 (Thread-1): Writing injected SQL for node "model.ge_tutorials.stg_npi"
+2020-10-08 05:36:40.419405 (Thread-1): finished collecting timing info
+2020-10-08 05:36:40.470604 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-10-08 05:36:40.470772 (Thread-1): On model.ge_tutorials.stg_npi: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_npi"} */
+drop view if exists "airflow"."public"."stg_npi__dbt_tmp" cascade
+2020-10-08 05:36:40.471378 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 05:36:40.475091 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-10-08 05:36:40.475204 (Thread-1): On model.ge_tutorials.stg_npi: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_npi"} */
+drop view if exists "airflow"."public"."stg_npi__dbt_backup" cascade
+2020-10-08 05:36:40.475527 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 05:36:40.477356 (Thread-1): Writing runtime SQL for node "model.ge_tutorials.stg_npi"
+2020-10-08 05:36:40.477674 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-10-08 05:36:40.477777 (Thread-1): On model.ge_tutorials.stg_npi: BEGIN
+2020-10-08 05:36:40.478063 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2020-10-08 05:36:40.478184 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-10-08 05:36:40.478279 (Thread-1): On model.ge_tutorials.stg_npi: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_npi"} */
+
+  create view "airflow"."public"."stg_npi__dbt_tmp" as (
+    select 
+	npi as npi,
+	entity_type_code as entity_type_code,
+	organization_name as organization_name,
+	last_name as last_name,
+	first_name as first_name,
+	state as state_abbreviation,
+	taxonomy_code as taxonomy_code
+  from "airflow"."public"."npi_small"
+  );
+
+2020-10-08 05:36:40.479620 (Thread-1): SQL status: CREATE VIEW in 0.00 seconds
+2020-10-08 05:36:40.482783 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-10-08 05:36:40.482898 (Thread-1): On model.ge_tutorials.stg_npi: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_npi"} */
+alter table "airflow"."public"."stg_npi__dbt_tmp" rename to "stg_npi"
+2020-10-08 05:36:40.483335 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2020-10-08 05:36:40.484336 (Thread-1): On model.ge_tutorials.stg_npi: COMMIT
+2020-10-08 05:36:40.484445 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-10-08 05:36:40.484540 (Thread-1): On model.ge_tutorials.stg_npi: COMMIT
+2020-10-08 05:36:40.488189 (Thread-1): SQL status: COMMIT in 0.00 seconds
+2020-10-08 05:36:40.490543 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-10-08 05:36:40.490670 (Thread-1): On model.ge_tutorials.stg_npi: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_npi"} */
+drop view if exists "airflow"."public"."stg_npi__dbt_backup" cascade
+2020-10-08 05:36:40.491026 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 05:36:40.494180 (Thread-1): finished collecting timing info
+2020-10-08 05:36:40.494978 (Thread-1): 05:36:40 | 1 of 4 OK created view model public.stg_npi.......................... [CREATE VIEW in 0.10s]
+2020-10-08 05:36:40.495152 (Thread-1): Finished running node model.ge_tutorials.stg_npi
+2020-10-08 05:36:40.495357 (Thread-1): Began running node model.ge_tutorials.stg_state_abbreviations
+2020-10-08 05:36:40.495513 (Thread-1): 05:36:40 | 2 of 4 START view model public.stg_state_abbreviations............... [RUN]
+2020-10-08 05:36:40.495826 (Thread-1): Acquiring new postgres connection "model.ge_tutorials.stg_state_abbreviations".
+2020-10-08 05:36:40.495929 (Thread-1): Re-using an available connection from the pool (formerly model.ge_tutorials.stg_npi).
+2020-10-08 05:36:40.496030 (Thread-1): Compiling model.ge_tutorials.stg_state_abbreviations
+2020-10-08 05:36:40.506109 (Thread-1): Writing injected SQL for node "model.ge_tutorials.stg_state_abbreviations"
+2020-10-08 05:36:40.506421 (Thread-1): finished collecting timing info
+2020-10-08 05:36:40.516493 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_abbreviations".
+2020-10-08 05:36:40.516688 (Thread-1): On model.ge_tutorials.stg_state_abbreviations: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_state_abbreviations"} */
+drop view if exists "airflow"."public"."stg_state_abbreviations__dbt_tmp" cascade
+2020-10-08 05:36:40.517163 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 05:36:40.520694 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_abbreviations".
+2020-10-08 05:36:40.520870 (Thread-1): On model.ge_tutorials.stg_state_abbreviations: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_state_abbreviations"} */
+drop view if exists "airflow"."public"."stg_state_abbreviations__dbt_backup" cascade
+2020-10-08 05:36:40.521352 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 05:36:40.523975 (Thread-1): Writing runtime SQL for node "model.ge_tutorials.stg_state_abbreviations"
+2020-10-08 05:36:40.524516 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_abbreviations".
+2020-10-08 05:36:40.524700 (Thread-1): On model.ge_tutorials.stg_state_abbreviations: BEGIN
+2020-10-08 05:36:40.524975 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2020-10-08 05:36:40.525124 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_abbreviations".
+2020-10-08 05:36:40.525258 (Thread-1): On model.ge_tutorials.stg_state_abbreviations: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_state_abbreviations"} */
+
+  create view "airflow"."public"."stg_state_abbreviations__dbt_tmp" as (
+    select 
+	name as state_name,
+	abbreviation as state_abbreviation
+  from "airflow"."public"."state_abbreviations"
+  );
+
+2020-10-08 05:36:40.526248 (Thread-1): SQL status: CREATE VIEW in 0.00 seconds
+2020-10-08 05:36:40.530263 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_abbreviations".
+2020-10-08 05:36:40.530425 (Thread-1): On model.ge_tutorials.stg_state_abbreviations: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_state_abbreviations"} */
+alter table "airflow"."public"."stg_state_abbreviations__dbt_tmp" rename to "stg_state_abbreviations"
+2020-10-08 05:36:40.530893 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2020-10-08 05:36:40.532010 (Thread-1): On model.ge_tutorials.stg_state_abbreviations: COMMIT
+2020-10-08 05:36:40.532124 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_abbreviations".
+2020-10-08 05:36:40.532217 (Thread-1): On model.ge_tutorials.stg_state_abbreviations: COMMIT
+2020-10-08 05:36:40.533182 (Thread-1): SQL status: COMMIT in 0.00 seconds
+2020-10-08 05:36:40.536315 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_abbreviations".
+2020-10-08 05:36:40.536537 (Thread-1): On model.ge_tutorials.stg_state_abbreviations: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_state_abbreviations"} */
+drop view if exists "airflow"."public"."stg_state_abbreviations__dbt_backup" cascade
+2020-10-08 05:36:40.536937 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 05:36:40.543077 (Thread-1): finished collecting timing info
+2020-10-08 05:36:40.543986 (Thread-1): 05:36:40 | 2 of 4 OK created view model public.stg_state_abbreviations.......... [CREATE VIEW in 0.05s]
+2020-10-08 05:36:40.544167 (Thread-1): Finished running node model.ge_tutorials.stg_state_abbreviations
+2020-10-08 05:36:40.544616 (Thread-1): Began running node model.ge_tutorials.npi_with_state
+2020-10-08 05:36:40.544787 (Thread-1): 05:36:40 | 3 of 4 START view model public.npi_with_state........................ [RUN]
+2020-10-08 05:36:40.545137 (Thread-1): Acquiring new postgres connection "model.ge_tutorials.npi_with_state".
+2020-10-08 05:36:40.545241 (Thread-1): Re-using an available connection from the pool (formerly model.ge_tutorials.stg_state_abbreviations).
+2020-10-08 05:36:40.545343 (Thread-1): Compiling model.ge_tutorials.npi_with_state
+2020-10-08 05:36:40.557299 (Thread-1): Writing injected SQL for node "model.ge_tutorials.npi_with_state"
+2020-10-08 05:36:40.557641 (Thread-1): finished collecting timing info
+2020-10-08 05:36:40.567418 (Thread-1): Using postgres connection "model.ge_tutorials.npi_with_state".
+2020-10-08 05:36:40.567585 (Thread-1): On model.ge_tutorials.npi_with_state: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.npi_with_state"} */
+drop view if exists "airflow"."public"."npi_with_state__dbt_tmp" cascade
+2020-10-08 05:36:40.568004 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 05:36:40.572219 (Thread-1): Using postgres connection "model.ge_tutorials.npi_with_state".
+2020-10-08 05:36:40.572377 (Thread-1): On model.ge_tutorials.npi_with_state: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.npi_with_state"} */
+drop view if exists "airflow"."public"."npi_with_state__dbt_backup" cascade
+2020-10-08 05:36:40.572899 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 05:36:40.575042 (Thread-1): Writing runtime SQL for node "model.ge_tutorials.npi_with_state"
+2020-10-08 05:36:40.575417 (Thread-1): Using postgres connection "model.ge_tutorials.npi_with_state".
+2020-10-08 05:36:40.575533 (Thread-1): On model.ge_tutorials.npi_with_state: BEGIN
+2020-10-08 05:36:40.575837 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2020-10-08 05:36:40.575959 (Thread-1): Using postgres connection "model.ge_tutorials.npi_with_state".
+2020-10-08 05:36:40.576065 (Thread-1): On model.ge_tutorials.npi_with_state: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.npi_with_state"} */
+
+  create view "airflow"."public"."npi_with_state__dbt_tmp" as (
+    select 
+	n.npi,
+	n.entity_type_code,
+	n.organization_name,
+	n.last_name,
+	n.first_name,
+	n.taxonomy_code,
+	n.state_abbreviation,
+	s.state_name
+from "airflow"."public"."stg_npi" n
+-- due to the nature of the data some state abbreviations are not valid
+-- which results in state names being null  - in this case,
+-- switch to inner join
+inner join "airflow"."public"."stg_state_abbreviations" s
+	on n.state_abbreviation = s.state_abbreviation
+  );
+
+2020-10-08 05:36:40.577226 (Thread-1): SQL status: CREATE VIEW in 0.00 seconds
+2020-10-08 05:36:40.580434 (Thread-1): Using postgres connection "model.ge_tutorials.npi_with_state".
+2020-10-08 05:36:40.580550 (Thread-1): On model.ge_tutorials.npi_with_state: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.npi_with_state"} */
+alter table "airflow"."public"."npi_with_state__dbt_tmp" rename to "npi_with_state"
+2020-10-08 05:36:40.580980 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2020-10-08 05:36:40.582015 (Thread-1): On model.ge_tutorials.npi_with_state: COMMIT
+2020-10-08 05:36:40.582126 (Thread-1): Using postgres connection "model.ge_tutorials.npi_with_state".
+2020-10-08 05:36:40.582221 (Thread-1): On model.ge_tutorials.npi_with_state: COMMIT
+2020-10-08 05:36:40.583223 (Thread-1): SQL status: COMMIT in 0.00 seconds
+2020-10-08 05:36:40.585692 (Thread-1): Using postgres connection "model.ge_tutorials.npi_with_state".
+2020-10-08 05:36:40.585815 (Thread-1): On model.ge_tutorials.npi_with_state: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.npi_with_state"} */
+drop view if exists "airflow"."public"."npi_with_state__dbt_backup" cascade
+2020-10-08 05:36:40.586133 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 05:36:40.590121 (Thread-1): finished collecting timing info
+2020-10-08 05:36:40.590998 (Thread-1): 05:36:40 | 3 of 4 OK created view model public.npi_with_state................... [CREATE VIEW in 0.05s]
+2020-10-08 05:36:40.591175 (Thread-1): Finished running node model.ge_tutorials.npi_with_state
+2020-10-08 05:36:40.591709 (Thread-1): Began running node model.ge_tutorials.count_providers_by_state
+2020-10-08 05:36:40.591876 (Thread-1): 05:36:40 | 4 of 4 START view model public.count_providers_by_state.............. [RUN]
+2020-10-08 05:36:40.592210 (Thread-1): Acquiring new postgres connection "model.ge_tutorials.count_providers_by_state".
+2020-10-08 05:36:40.592311 (Thread-1): Re-using an available connection from the pool (formerly model.ge_tutorials.npi_with_state).
+2020-10-08 05:36:40.592410 (Thread-1): Compiling model.ge_tutorials.count_providers_by_state
+2020-10-08 05:36:40.601682 (Thread-1): Writing injected SQL for node "model.ge_tutorials.count_providers_by_state"
+2020-10-08 05:36:40.602245 (Thread-1): finished collecting timing info
+2020-10-08 05:36:40.613109 (Thread-1): Using postgres connection "model.ge_tutorials.count_providers_by_state".
+2020-10-08 05:36:40.613280 (Thread-1): On model.ge_tutorials.count_providers_by_state: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.count_providers_by_state"} */
+drop view if exists "airflow"."public"."count_providers_by_state__dbt_tmp" cascade
+2020-10-08 05:36:40.613646 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 05:36:40.616681 (Thread-1): Using postgres connection "model.ge_tutorials.count_providers_by_state".
+2020-10-08 05:36:40.616798 (Thread-1): On model.ge_tutorials.count_providers_by_state: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.count_providers_by_state"} */
+drop view if exists "airflow"."public"."count_providers_by_state__dbt_backup" cascade
+2020-10-08 05:36:40.617143 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 05:36:40.620947 (Thread-1): Writing runtime SQL for node "model.ge_tutorials.count_providers_by_state"
+2020-10-08 05:36:40.621388 (Thread-1): Using postgres connection "model.ge_tutorials.count_providers_by_state".
+2020-10-08 05:36:40.621542 (Thread-1): On model.ge_tutorials.count_providers_by_state: BEGIN
+2020-10-08 05:36:40.621897 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2020-10-08 05:36:40.622041 (Thread-1): Using postgres connection "model.ge_tutorials.count_providers_by_state".
+2020-10-08 05:36:40.622141 (Thread-1): On model.ge_tutorials.count_providers_by_state: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.count_providers_by_state"} */
+
+  create view "airflow"."public"."count_providers_by_state__dbt_tmp" as (
+    select 
+	state_name,
+	count(distinct npi) as count_providers
+from "airflow"."public"."npi_with_state" n
+group by state_name
+  );
+
+2020-10-08 05:36:40.623542 (Thread-1): SQL status: CREATE VIEW in 0.00 seconds
+2020-10-08 05:36:40.626909 (Thread-1): Using postgres connection "model.ge_tutorials.count_providers_by_state".
+2020-10-08 05:36:40.627046 (Thread-1): On model.ge_tutorials.count_providers_by_state: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.count_providers_by_state"} */
+alter table "airflow"."public"."count_providers_by_state__dbt_tmp" rename to "count_providers_by_state"
+2020-10-08 05:36:40.627522 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2020-10-08 05:36:40.628624 (Thread-1): On model.ge_tutorials.count_providers_by_state: COMMIT
+2020-10-08 05:36:40.628739 (Thread-1): Using postgres connection "model.ge_tutorials.count_providers_by_state".
+2020-10-08 05:36:40.628835 (Thread-1): On model.ge_tutorials.count_providers_by_state: COMMIT
+2020-10-08 05:36:40.629838 (Thread-1): SQL status: COMMIT in 0.00 seconds
+2020-10-08 05:36:40.632258 (Thread-1): Using postgres connection "model.ge_tutorials.count_providers_by_state".
+2020-10-08 05:36:40.632370 (Thread-1): On model.ge_tutorials.count_providers_by_state: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.count_providers_by_state"} */
+drop view if exists "airflow"."public"."count_providers_by_state__dbt_backup" cascade
+2020-10-08 05:36:40.632643 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-10-08 05:36:40.636092 (Thread-1): finished collecting timing info
+2020-10-08 05:36:40.637131 (Thread-1): 05:36:40 | 4 of 4 OK created view model public.count_providers_by_state......... [CREATE VIEW in 0.04s]
+2020-10-08 05:36:40.637318 (Thread-1): Finished running node model.ge_tutorials.count_providers_by_state
+2020-10-08 05:36:40.702675 (MainThread): Using postgres connection "master".
+2020-10-08 05:36:40.702850 (MainThread): On master: BEGIN
+2020-10-08 05:36:40.703169 (MainThread): SQL status: BEGIN in 0.00 seconds
+2020-10-08 05:36:40.703304 (MainThread): On master: COMMIT
+2020-10-08 05:36:40.703419 (MainThread): Using postgres connection "master".
+2020-10-08 05:36:40.703519 (MainThread): On master: COMMIT
+2020-10-08 05:36:40.703717 (MainThread): SQL status: COMMIT in 0.00 seconds
+2020-10-08 05:36:40.704062 (MainThread): 05:36:40 | 
+2020-10-08 05:36:40.704199 (MainThread): 05:36:40 | Finished running 4 view models in 0.59s.
+2020-10-08 05:36:40.704318 (MainThread): Connection 'master' was left open.
+2020-10-08 05:36:40.704428 (MainThread): On master: Close
+2020-10-08 05:36:40.704574 (MainThread): Connection 'model.ge_tutorials.count_providers_by_state' was left open.
+2020-10-08 05:36:40.704694 (MainThread): On model.ge_tutorials.count_providers_by_state: Close
+2020-10-08 05:36:40.721874 (MainThread): 
+2020-10-08 05:36:40.722079 (MainThread): Completed successfully
+2020-10-08 05:36:40.722229 (MainThread): 
+Done. PASS=4 WARN=0 ERROR=0 SKIP=0 TOTAL=4
+2020-10-08 05:36:40.722487 (MainThread): Flushing usage events
