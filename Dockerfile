@@ -37,7 +37,6 @@ RUN set -ex \
         libffi-dev \
         libpq-dev \
         git \
-	vim \
     ' \
     && apt-get update -yqq \
     && apt-get upgrade -yqq \
@@ -51,6 +50,7 @@ RUN set -ex \
         rsync \
         netcat \
         locales \
+	vim \
     && sed -i 's/^# en_US.UTF-8 UTF-8$/en_US.UTF-8 UTF-8/g' /etc/locale.gen \
     && locale-gen \
     && update-locale LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 \
@@ -79,10 +79,9 @@ COPY deploy/config/airflow.cfg ${AIRFLOW_USER_HOME}/airflow.cfg
 
 RUN chown -R airflow: ${AIRFLOW_USER_HOME}
 
-EXPOSE 8080 5555 8793
+EXPOSE 8080 5555 8793 8085
 
 RUN set -ex \
-    && pip3 install scipy \
     && pip3 install great_expectations==0.12.1 \
     && pip3 install dbt==0.16.0 \
     && pip3 uninstall -y SQLAlchemy \
@@ -92,4 +91,3 @@ USER airflow
 WORKDIR ${AIRFLOW_USER_HOME}
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["webserver"]
-

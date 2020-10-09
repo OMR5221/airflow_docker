@@ -114,6 +114,10 @@ case "$1" in
       # With the "Local" and "Sequential" executors it should all run in one container.
       airflow scheduler &
     fi
+    cd dbt/
+    dbt docs generate
+    dbt docs serve --port 8085 &
+    cd ..
     exec airflow webserver
     ;;
   worker|scheduler)
