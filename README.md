@@ -1,5 +1,5 @@
 # Great Expectations + dbt + Airflow PipelineAirflowDagWithoutGe
 
-** Based on project: https://github.com/superconductive/ge_tutorials
+* Based on project: https://github.com/superconductive/ge_tutorials
 
-# Attempting to configure for Production utilization
+## Attempting to configure for Production utilization
