@@ -1,4 +1,4 @@
-# Great Expectations + dbt + Airflow PipelineAirflowDagWithoutGe
+# Great Expectations + dbt + Airflow Pipeline
 
 * Based on project: https://github.com/superconductive/ge_tutorials
 
