@@ -2,6 +2,7 @@ version: '3.7'
 services:
     postgres:
         image: postgres:9.6
+        container_name: airflow_postgres
         environment:
             - POSTGRES_USER=airflow
             - POSTGRES_PASSWORD=airflow
@@ -16,6 +17,7 @@ services:
 
     webserver:
         build: .
+        container_name: airflow_webserver
         restart: always
         depends_on:
             - postgres
@@ -41,6 +43,7 @@ services:
         ports:
             - "8080:8080"
             - "8888:8888"
+            - "8085:8085"
         command: webserver
         healthcheck:
             test: ["CMD-SHELL", "[ -f /usr/local/airflow/airflow-webserver.pid ]"]
