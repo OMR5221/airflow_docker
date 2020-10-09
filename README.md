@@ -5,7 +5,7 @@
 ### Attempting to configure for Production utilization:
 #### Changes:
 1. Moved to Airflow v1.10.12
-2. Defined versions for dbt and great_expectations that work for goven DAGs
+2. Defined versions for dbt and great_expectations that work for available DAGs
 3. Added DBT docs to accessible urls: 
 * Airflow: http://localhost:8080/
 * DBT Docs: http://localhost:8085/
