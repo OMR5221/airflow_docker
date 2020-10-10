@@ -2854,3 +2854,426 @@ drop view if exists "airflow"."public"."count_providers_by_state__dbt_backup" ca
 2020-10-09 03:09:47.002810 (MainThread): 
 Done. PASS=4 WARN=0 ERROR=0 SKIP=0 TOTAL=4
 2020-10-09 03:09:47.003018 (MainThread): Flushing usage events
+2020-10-09 13:55:59.544685 (MainThread): Got an exception trying to initialize tracking
+2020-10-09 13:55:59.544840 (MainThread): Running with dbt=0.16.0
+2020-10-09 13:55:59.626896 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.generate.GenerateTask'>, compile=True, debug=False, exclude=None, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='/usr/local/airflow/.dbt', project_dir=None, record_timing_info=None, rpc_method='docs.generate', single_threaded=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, vars='{}', version_check=True, warn_error=False, which='generate', write_json=True)
+2020-10-09 13:55:59.627253 (MainThread): Tracking: do not track
+2020-10-09 13:55:59.667117 (MainThread): Partial parsing not enabled
+2020-10-09 13:55:59.672155 (MainThread): Parsing macros/core.sql
+2020-10-09 13:55:59.685734 (MainThread): Parsing macros/materializations/helpers.sql
+2020-10-09 13:55:59.711006 (MainThread): Parsing macros/materializations/table/table.sql
+2020-10-09 13:55:59.733074 (MainThread): Parsing macros/materializations/common/merge.sql
+2020-10-09 13:55:59.780115 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-10-09 13:55:59.790947 (MainThread): Parsing macros/materializations/view/view.sql
+2020-10-09 13:55:59.801993 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2020-10-09 13:55:59.864676 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2020-10-09 13:55:59.893900 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-10-09 13:55:59.897072 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2020-10-09 13:55:59.908327 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2020-10-09 13:55:59.911696 (MainThread): Parsing macros/materializations/seed/seed.sql
+2020-10-09 13:55:59.959653 (MainThread): Parsing macros/schema_tests/relationships.sql
+2020-10-09 13:55:59.962552 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2020-10-09 13:55:59.967231 (MainThread): Parsing macros/schema_tests/not_null.sql
+2020-10-09 13:55:59.969278 (MainThread): Parsing macros/schema_tests/unique.sql
+2020-10-09 13:55:59.971537 (MainThread): Parsing macros/etc/query.sql
+2020-10-09 13:55:59.973701 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2020-10-09 13:55:59.977951 (MainThread): Parsing macros/etc/get_custom_database.sql
+2020-10-09 13:55:59.980294 (MainThread): Parsing macros/etc/datetime.sql
+2020-10-09 13:56:00.002917 (MainThread): Parsing macros/etc/get_relation_comment.sql
+2020-10-09 13:56:00.007597 (MainThread): Parsing macros/etc/is_incremental.sql
+2020-10-09 13:56:00.011468 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2020-10-09 13:56:00.013890 (MainThread): Parsing macros/adapters/common.sql
+2020-10-09 13:56:00.112916 (MainThread): Parsing macros/relations.sql
+2020-10-09 13:56:00.116003 (MainThread): Parsing macros/adapters.sql
+2020-10-09 13:56:00.154958 (MainThread): Parsing macros/catalog.sql
+2020-10-09 13:56:00.160865 (MainThread): Parsing macros/materializations/snapshot_merge.sql
+2020-10-09 13:56:00.197994 (MainThread): Partial parsing not enabled
+2020-10-09 13:56:00.248994 (MainThread): Acquiring new postgres connection "model.ge_tutorials.npi_with_state".
+2020-10-09 13:56:00.249146 (MainThread): Opening a new connection, currently in state init
+2020-10-09 13:56:00.276207 (MainThread): Acquiring new postgres connection "model.ge_tutorials.count_providers_by_state".
+2020-10-09 13:56:00.276356 (MainThread): Opening a new connection, currently in state init
+2020-10-09 13:56:00.284386 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_state_abbreviations".
+2020-10-09 13:56:00.284527 (MainThread): Opening a new connection, currently in state init
+2020-10-09 13:56:00.292929 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_npi".
+2020-10-09 13:56:00.293071 (MainThread): Opening a new connection, currently in state init
+2020-10-09 13:56:00.750056 (MainThread): Found 4 models, 0 tests, 0 snapshots, 0 analyses, 127 macros, 0 operations, 0 seed files, 2 sources
+2020-10-09 13:56:00.754324 (MainThread): 
+2020-10-09 13:56:00.754525 (MainThread): 13:56:00 | Concurrency: 1 threads (target='dev')
+2020-10-09 13:56:00.754669 (MainThread): 13:56:00 | 
+2020-10-09 13:56:00.761596 (Thread-1): Began running node model.ge_tutorials.stg_npi
+2020-10-09 13:56:00.762021 (Thread-1): Acquiring new postgres connection "model.ge_tutorials.stg_npi".
+2020-10-09 13:56:00.762129 (Thread-1): Opening a new connection, currently in state init
+2020-10-09 13:56:00.762250 (Thread-1): Compiling model.ge_tutorials.stg_npi
+2020-10-09 13:56:00.784786 (Thread-1): Writing injected SQL for node "model.ge_tutorials.stg_npi"
+2020-10-09 13:56:00.785077 (Thread-1): finished collecting timing info
+2020-10-09 13:56:00.785380 (Thread-1): finished collecting timing info
+2020-10-09 13:56:00.785841 (Thread-1): Finished running node model.ge_tutorials.stg_npi
+2020-10-09 13:56:00.785994 (Thread-1): Began running node model.ge_tutorials.stg_state_abbreviations
+2020-10-09 13:56:00.786274 (Thread-1): Acquiring new postgres connection "model.ge_tutorials.stg_state_abbreviations".
+2020-10-09 13:56:00.786376 (Thread-1): Opening a new connection, currently in state init
+2020-10-09 13:56:00.786606 (Thread-1): Compiling model.ge_tutorials.stg_state_abbreviations
+2020-10-09 13:56:00.795958 (Thread-1): Writing injected SQL for node "model.ge_tutorials.stg_state_abbreviations"
+2020-10-09 13:56:00.796249 (Thread-1): finished collecting timing info
+2020-10-09 13:56:00.796536 (Thread-1): finished collecting timing info
+2020-10-09 13:56:00.796990 (Thread-1): Finished running node model.ge_tutorials.stg_state_abbreviations
+2020-10-09 13:56:00.797446 (Thread-1): Began running node model.ge_tutorials.npi_with_state
+2020-10-09 13:56:00.797747 (Thread-1): Acquiring new postgres connection "model.ge_tutorials.npi_with_state".
+2020-10-09 13:56:00.797849 (Thread-1): Opening a new connection, currently in state init
+2020-10-09 13:56:00.797945 (Thread-1): Compiling model.ge_tutorials.npi_with_state
+2020-10-09 13:56:00.808436 (Thread-1): Writing injected SQL for node "model.ge_tutorials.npi_with_state"
+2020-10-09 13:56:00.808680 (Thread-1): finished collecting timing info
+2020-10-09 13:56:00.808950 (Thread-1): finished collecting timing info
+2020-10-09 13:56:00.809364 (Thread-1): Finished running node model.ge_tutorials.npi_with_state
+2020-10-09 13:56:00.809779 (Thread-1): Began running node model.ge_tutorials.count_providers_by_state
+2020-10-09 13:56:00.810069 (Thread-1): Acquiring new postgres connection "model.ge_tutorials.count_providers_by_state".
+2020-10-09 13:56:00.810167 (Thread-1): Opening a new connection, currently in state init
+2020-10-09 13:56:00.810257 (Thread-1): Compiling model.ge_tutorials.count_providers_by_state
+2020-10-09 13:56:00.818782 (Thread-1): Writing injected SQL for node "model.ge_tutorials.count_providers_by_state"
+2020-10-09 13:56:00.819063 (Thread-1): finished collecting timing info
+2020-10-09 13:56:00.819343 (Thread-1): finished collecting timing info
+2020-10-09 13:56:00.819785 (Thread-1): Finished running node model.ge_tutorials.count_providers_by_state
+2020-10-09 13:56:00.861627 (MainThread): Connection 'model.ge_tutorials.stg_npi' was properly closed.
+2020-10-09 13:56:00.861787 (MainThread): Connection 'model.ge_tutorials.count_providers_by_state' was properly closed.
+2020-10-09 13:56:00.875289 (MainThread): 13:56:00 | Done.
+2020-10-09 13:56:00.878027 (MainThread): Acquiring new postgres connection "generate_catalog".
+2020-10-09 13:56:00.878135 (MainThread): Opening a new connection, currently in state init
+2020-10-09 13:56:00.878223 (MainThread): 13:56:00 | Building catalog
+2020-10-09 13:56:00.910311 (ThreadPoolExecutor-0_0): Acquiring new postgres connection "airflow.information_schema".
+2020-10-09 13:56:00.910483 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2020-10-09 13:56:01.069907 (ThreadPoolExecutor-0_0): Using postgres connection "airflow.information_schema".
+2020-10-09 13:56:01.070139 (ThreadPoolExecutor-0_0): On airflow.information_schema: BEGIN
+2020-10-09 13:56:01.074818 (ThreadPoolExecutor-0_0): SQL status: BEGIN in 0.00 seconds
+2020-10-09 13:56:01.075010 (ThreadPoolExecutor-0_0): Using postgres connection "airflow.information_schema".
+2020-10-09 13:56:01.075137 (ThreadPoolExecutor-0_0): On airflow.information_schema: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "connection_name": "airflow.information_schema"} */
+
+    
+    
+
+    select
+        'airflow' as table_database,
+        sch.nspname as table_schema,
+        tbl.relname as table_name,
+        case tbl.relkind
+            when 'v' then 'VIEW'
+            else 'BASE TABLE'
+        end as table_type,
+        null::text as table_comment,
+        col.attname as column_name,
+        col.attnum as column_index,
+        pg_catalog.format_type(col.atttypid, col.atttypmod) as column_type,
+        null::text as column_comment,
+        pg_get_userbyid(tbl.relowner) as table_owner
+
+    from pg_catalog.pg_namespace sch
+    join pg_catalog.pg_class tbl on tbl.relnamespace = sch.oid
+    join pg_catalog.pg_attribute col on col.attrelid = tbl.oid
+
+    where (upper(sch.nspname) = upper('public'))
+      and not pg_is_other_temp_schema(sch.oid) -- not a temporary schema belonging to another session
+      and tbl.relpersistence = 'p' -- [p]ermanent table. Other values are [u]nlogged table, [t]emporary table
+      and tbl.relkind in ('r', 'v', 'f', 'p') -- o[r]dinary table, [v]iew, [f]oreign table, [p]artitioned table. Other values are [i]ndex, [S]equence, [c]omposite type, [t]OAST table, [m]aterialized view
+      and col.attnum > 0 -- negative numbers are used for system columns such as oid
+      and not col.attisdropped -- column as not been dropped
+
+    order by
+        sch.nspname,
+        tbl.relname,
+        col.attnum
+2020-10-09 13:56:01.080900 (ThreadPoolExecutor-0_0): SQL status: SELECT 197 in 0.01 seconds
+2020-10-09 13:56:01.106548 (ThreadPoolExecutor-0_0): On airflow.information_schema: ROLLBACK
+2020-10-09 13:56:01.281472 (MainThread): 13:56:01 | Catalog written to /usr/local/airflow/dbt/target/catalog.json
+2020-10-09 13:56:01.282001 (MainThread): Flushing usage events
+2020-10-09 13:56:01.282170 (MainThread): Connection 'generate_catalog' was properly closed.
+2020-10-09 13:56:01.282260 (MainThread): Connection 'airflow.information_schema' was left open.
+2020-10-09 13:56:01.282361 (MainThread): On airflow.information_schema: Close
+2020-10-09 13:56:02.565593 (MainThread): Got an exception trying to initialize tracking
+2020-10-09 13:56:02.565781 (MainThread): Running with dbt=0.16.0
+2020-10-09 13:56:02.650590 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.serve.ServeTask'>, debug=False, log_cache_events=False, log_format='default', partial_parse=None, port=8085, profile=None, profiles_dir='/usr/local/airflow/.dbt', project_dir=None, record_timing_info=None, rpc_method=None, single_threaded=False, strict=False, target=None, test_new_parser=False, use_cache=True, vars='{}', warn_error=False, which='serve', write_json=True)
+2020-10-09 13:56:02.650938 (MainThread): Tracking: do not track
+2020-10-09 13:56:02.658172 (MainThread): Serving docs at 0.0.0.0:8085
+2020-10-09 13:56:02.658550 (MainThread): To access from your browser, navigate to:  http://localhost:8085
+2020-10-09 13:56:02.658690 (MainThread): Press Ctrl+C to exit.
+
+
+2020-10-10 02:56:06.604279 (MainThread): Got an exception trying to initialize tracking
+2020-10-10 02:56:06.604455 (MainThread): Running with dbt=0.16.0
+2020-10-10 02:56:06.690493 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.generate.GenerateTask'>, compile=True, debug=False, exclude=None, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='/usr/local/airflow/.dbt', project_dir=None, record_timing_info=None, rpc_method='docs.generate', single_threaded=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, vars='{}', version_check=True, warn_error=False, which='generate', write_json=True)
+2020-10-10 02:56:06.690847 (MainThread): Tracking: do not track
+2020-10-10 02:56:06.726202 (MainThread): Partial parsing not enabled
+2020-10-10 02:56:06.728276 (MainThread): Parsing macros/core.sql
+2020-10-10 02:56:06.736089 (MainThread): Parsing macros/materializations/helpers.sql
+2020-10-10 02:56:06.750770 (MainThread): Parsing macros/materializations/table/table.sql
+2020-10-10 02:56:06.762895 (MainThread): Parsing macros/materializations/common/merge.sql
+2020-10-10 02:56:06.803634 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-10-10 02:56:06.819407 (MainThread): Parsing macros/materializations/view/view.sql
+2020-10-10 02:56:06.840302 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2020-10-10 02:56:06.944215 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2020-10-10 02:56:06.975977 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-10-10 02:56:06.979019 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2020-10-10 02:56:06.990066 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2020-10-10 02:56:06.993671 (MainThread): Parsing macros/materializations/seed/seed.sql
+2020-10-10 02:56:07.035636 (MainThread): Parsing macros/schema_tests/relationships.sql
+2020-10-10 02:56:07.037631 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2020-10-10 02:56:07.041527 (MainThread): Parsing macros/schema_tests/not_null.sql
+2020-10-10 02:56:07.042995 (MainThread): Parsing macros/schema_tests/unique.sql
+2020-10-10 02:56:07.044759 (MainThread): Parsing macros/etc/query.sql
+2020-10-10 02:56:07.046412 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2020-10-10 02:56:07.049860 (MainThread): Parsing macros/etc/get_custom_database.sql
+2020-10-10 02:56:07.051571 (MainThread): Parsing macros/etc/datetime.sql
+2020-10-10 02:56:07.069083 (MainThread): Parsing macros/etc/get_relation_comment.sql
+2020-10-10 02:56:07.072502 (MainThread): Parsing macros/etc/is_incremental.sql
+2020-10-10 02:56:07.075266 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2020-10-10 02:56:07.076823 (MainThread): Parsing macros/adapters/common.sql
+2020-10-10 02:56:07.204319 (MainThread): Parsing macros/relations.sql
+2020-10-10 02:56:07.207874 (MainThread): Parsing macros/adapters.sql
+2020-10-10 02:56:07.247809 (MainThread): Parsing macros/catalog.sql
+2020-10-10 02:56:07.252960 (MainThread): Parsing macros/materializations/snapshot_merge.sql
+2020-10-10 02:56:07.284309 (MainThread): Partial parsing not enabled
+2020-10-10 02:56:07.333596 (MainThread): Acquiring new postgres connection "model.ge_tutorials.npi_with_state".
+2020-10-10 02:56:07.333771 (MainThread): Opening a new connection, currently in state init
+2020-10-10 02:56:07.367296 (MainThread): Acquiring new postgres connection "model.ge_tutorials.count_providers_by_state".
+2020-10-10 02:56:07.367465 (MainThread): Opening a new connection, currently in state init
+2020-10-10 02:56:07.377744 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_state_abbreviations".
+2020-10-10 02:56:07.377917 (MainThread): Opening a new connection, currently in state init
+2020-10-10 02:56:07.388458 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_npi".
+2020-10-10 02:56:07.388637 (MainThread): Opening a new connection, currently in state init
+2020-10-10 02:56:07.857599 (MainThread): Found 4 models, 0 tests, 0 snapshots, 0 analyses, 127 macros, 0 operations, 0 seed files, 2 sources
+2020-10-10 02:56:07.862051 (MainThread): 
+2020-10-10 02:56:07.862259 (MainThread): 02:56:07 | Concurrency: 1 threads (target='dev')
+2020-10-10 02:56:07.862414 (MainThread): 02:56:07 | 
+2020-10-10 02:56:07.869610 (Thread-1): Began running node model.ge_tutorials.stg_npi
+2020-10-10 02:56:07.870060 (Thread-1): Acquiring new postgres connection "model.ge_tutorials.stg_npi".
+2020-10-10 02:56:07.870173 (Thread-1): Opening a new connection, currently in state init
+2020-10-10 02:56:07.870281 (Thread-1): Compiling model.ge_tutorials.stg_npi
+2020-10-10 02:56:07.893358 (Thread-1): Writing injected SQL for node "model.ge_tutorials.stg_npi"
+2020-10-10 02:56:07.893745 (Thread-1): finished collecting timing info
+2020-10-10 02:56:07.894074 (Thread-1): finished collecting timing info
+2020-10-10 02:56:07.894564 (Thread-1): Finished running node model.ge_tutorials.stg_npi
+2020-10-10 02:56:07.894717 (Thread-1): Began running node model.ge_tutorials.stg_state_abbreviations
+2020-10-10 02:56:07.894997 (Thread-1): Acquiring new postgres connection "model.ge_tutorials.stg_state_abbreviations".
+2020-10-10 02:56:07.895109 (Thread-1): Opening a new connection, currently in state init
+2020-10-10 02:56:07.895212 (Thread-1): Compiling model.ge_tutorials.stg_state_abbreviations
+2020-10-10 02:56:07.905359 (Thread-1): Writing injected SQL for node "model.ge_tutorials.stg_state_abbreviations"
+2020-10-10 02:56:07.905687 (Thread-1): finished collecting timing info
+2020-10-10 02:56:07.905991 (Thread-1): finished collecting timing info
+2020-10-10 02:56:07.906473 (Thread-1): Finished running node model.ge_tutorials.stg_state_abbreviations
+2020-10-10 02:56:07.906894 (Thread-1): Began running node model.ge_tutorials.npi_with_state
+2020-10-10 02:56:07.907210 (Thread-1): Acquiring new postgres connection "model.ge_tutorials.npi_with_state".
+2020-10-10 02:56:07.907317 (Thread-1): Opening a new connection, currently in state init
+2020-10-10 02:56:07.907417 (Thread-1): Compiling model.ge_tutorials.npi_with_state
+2020-10-10 02:56:07.918191 (Thread-1): Writing injected SQL for node "model.ge_tutorials.npi_with_state"
+2020-10-10 02:56:07.918481 (Thread-1): finished collecting timing info
+2020-10-10 02:56:07.918769 (Thread-1): finished collecting timing info
+2020-10-10 02:56:07.919214 (Thread-1): Finished running node model.ge_tutorials.npi_with_state
+2020-10-10 02:56:07.919655 (Thread-1): Began running node model.ge_tutorials.count_providers_by_state
+2020-10-10 02:56:07.919956 (Thread-1): Acquiring new postgres connection "model.ge_tutorials.count_providers_by_state".
+2020-10-10 02:56:07.920059 (Thread-1): Opening a new connection, currently in state init
+2020-10-10 02:56:07.920154 (Thread-1): Compiling model.ge_tutorials.count_providers_by_state
+2020-10-10 02:56:07.929057 (Thread-1): Writing injected SQL for node "model.ge_tutorials.count_providers_by_state"
+2020-10-10 02:56:07.929295 (Thread-1): finished collecting timing info
+2020-10-10 02:56:07.929564 (Thread-1): finished collecting timing info
+2020-10-10 02:56:07.929976 (Thread-1): Finished running node model.ge_tutorials.count_providers_by_state
+2020-10-10 02:56:07.969501 (MainThread): Connection 'model.ge_tutorials.stg_npi' was properly closed.
+2020-10-10 02:56:07.969651 (MainThread): Connection 'model.ge_tutorials.count_providers_by_state' was properly closed.
+2020-10-10 02:56:07.982808 (MainThread): 02:56:07 | Done.
+2020-10-10 02:56:07.984540 (MainThread): Acquiring new postgres connection "generate_catalog".
+2020-10-10 02:56:07.984654 (MainThread): Opening a new connection, currently in state init
+2020-10-10 02:56:07.984746 (MainThread): 02:56:07 | Building catalog
+2020-10-10 02:56:08.015700 (ThreadPoolExecutor-0_0): Acquiring new postgres connection "airflow.information_schema".
+2020-10-10 02:56:08.015852 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2020-10-10 02:56:08.118661 (ThreadPoolExecutor-0_0): Using postgres connection "airflow.information_schema".
+2020-10-10 02:56:08.118812 (ThreadPoolExecutor-0_0): On airflow.information_schema: BEGIN
+2020-10-10 02:56:08.122050 (ThreadPoolExecutor-0_0): SQL status: BEGIN in 0.00 seconds
+2020-10-10 02:56:08.122275 (ThreadPoolExecutor-0_0): Using postgres connection "airflow.information_schema".
+2020-10-10 02:56:08.122426 (ThreadPoolExecutor-0_0): On airflow.information_schema: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "connection_name": "airflow.information_schema"} */
+
+    
+    
+
+    select
+        'airflow' as table_database,
+        sch.nspname as table_schema,
+        tbl.relname as table_name,
+        case tbl.relkind
+            when 'v' then 'VIEW'
+            else 'BASE TABLE'
+        end as table_type,
+        null::text as table_comment,
+        col.attname as column_name,
+        col.attnum as column_index,
+        pg_catalog.format_type(col.atttypid, col.atttypmod) as column_type,
+        null::text as column_comment,
+        pg_get_userbyid(tbl.relowner) as table_owner
+
+    from pg_catalog.pg_namespace sch
+    join pg_catalog.pg_class tbl on tbl.relnamespace = sch.oid
+    join pg_catalog.pg_attribute col on col.attrelid = tbl.oid
+
+    where (upper(sch.nspname) = upper('public'))
+      and not pg_is_other_temp_schema(sch.oid) -- not a temporary schema belonging to another session
+      and tbl.relpersistence = 'p' -- [p]ermanent table. Other values are [u]nlogged table, [t]emporary table
+      and tbl.relkind in ('r', 'v', 'f', 'p') -- o[r]dinary table, [v]iew, [f]oreign table, [p]artitioned table. Other values are [i]ndex, [S]equence, [c]omposite type, [t]OAST table, [m]aterialized view
+      and col.attnum > 0 -- negative numbers are used for system columns such as oid
+      and not col.attisdropped -- column as not been dropped
+
+    order by
+        sch.nspname,
+        tbl.relname,
+        col.attnum
+2020-10-10 02:56:08.130311 (ThreadPoolExecutor-0_0): SQL status: SELECT 169 in 0.01 seconds
+2020-10-10 02:56:08.162323 (ThreadPoolExecutor-0_0): On airflow.information_schema: ROLLBACK
+2020-10-10 02:56:08.353162 (MainThread): 02:56:08 | Catalog written to /usr/local/airflow/dbt/target/catalog.json
+2020-10-10 02:56:08.353752 (MainThread): Flushing usage events
+2020-10-10 02:56:08.353965 (MainThread): Connection 'generate_catalog' was properly closed.
+2020-10-10 02:56:08.354083 (MainThread): Connection 'airflow.information_schema' was left open.
+2020-10-10 02:56:08.354193 (MainThread): On airflow.information_schema: Close
+2020-10-10 02:56:09.676569 (MainThread): Got an exception trying to initialize tracking
+2020-10-10 02:56:09.676733 (MainThread): Running with dbt=0.16.0
+2020-10-10 02:56:09.767662 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.serve.ServeTask'>, debug=False, log_cache_events=False, log_format='default', partial_parse=None, port=8085, profile=None, profiles_dir='/usr/local/airflow/.dbt', project_dir=None, record_timing_info=None, rpc_method=None, single_threaded=False, strict=False, target=None, test_new_parser=False, use_cache=True, vars='{}', warn_error=False, which='serve', write_json=True)
+2020-10-10 02:56:09.768055 (MainThread): Tracking: do not track
+2020-10-10 02:56:09.777509 (MainThread): Serving docs at 0.0.0.0:8085
+2020-10-10 02:56:09.777839 (MainThread): To access from your browser, navigate to:  http://localhost:8085
+2020-10-10 02:56:09.777993 (MainThread): Press Ctrl+C to exit.
+
+
+2020-10-10 03:03:47.521172 (MainThread): Got an exception trying to initialize tracking
+2020-10-10 03:03:47.521316 (MainThread): Running with dbt=0.16.0
+2020-10-10 03:03:47.605024 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.generate.GenerateTask'>, compile=True, debug=False, exclude=None, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='/usr/local/airflow/.dbt', project_dir=None, record_timing_info=None, rpc_method='docs.generate', single_threaded=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, vars='{}', version_check=True, warn_error=False, which='generate', write_json=True)
+2020-10-10 03:03:47.605385 (MainThread): Tracking: do not track
+2020-10-10 03:03:47.640819 (MainThread): Partial parsing not enabled
+2020-10-10 03:03:47.642936 (MainThread): Parsing macros/core.sql
+2020-10-10 03:03:47.651069 (MainThread): Parsing macros/materializations/helpers.sql
+2020-10-10 03:03:47.666645 (MainThread): Parsing macros/materializations/table/table.sql
+2020-10-10 03:03:47.679586 (MainThread): Parsing macros/materializations/common/merge.sql
+2020-10-10 03:03:47.705227 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-10-10 03:03:47.713956 (MainThread): Parsing macros/materializations/view/view.sql
+2020-10-10 03:03:47.725667 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2020-10-10 03:03:47.833969 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2020-10-10 03:03:47.880050 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-10-10 03:03:47.883149 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2020-10-10 03:03:47.894635 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2020-10-10 03:03:47.898211 (MainThread): Parsing macros/materializations/seed/seed.sql
+2020-10-10 03:03:47.942156 (MainThread): Parsing macros/schema_tests/relationships.sql
+2020-10-10 03:03:47.944011 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2020-10-10 03:03:47.947246 (MainThread): Parsing macros/schema_tests/not_null.sql
+2020-10-10 03:03:47.948575 (MainThread): Parsing macros/schema_tests/unique.sql
+2020-10-10 03:03:47.950216 (MainThread): Parsing macros/etc/query.sql
+2020-10-10 03:03:47.951760 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2020-10-10 03:03:47.954960 (MainThread): Parsing macros/etc/get_custom_database.sql
+2020-10-10 03:03:47.956565 (MainThread): Parsing macros/etc/datetime.sql
+2020-10-10 03:03:47.973055 (MainThread): Parsing macros/etc/get_relation_comment.sql
+2020-10-10 03:03:47.976277 (MainThread): Parsing macros/etc/is_incremental.sql
+2020-10-10 03:03:47.978923 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2020-10-10 03:03:47.980467 (MainThread): Parsing macros/adapters/common.sql
+2020-10-10 03:03:48.086645 (MainThread): Parsing macros/relations.sql
+2020-10-10 03:03:48.091263 (MainThread): Parsing macros/adapters.sql
+2020-10-10 03:03:48.143578 (MainThread): Parsing macros/catalog.sql
+2020-10-10 03:03:48.148740 (MainThread): Parsing macros/materializations/snapshot_merge.sql
+2020-10-10 03:03:48.180124 (MainThread): Partial parsing not enabled
+2020-10-10 03:03:48.239063 (MainThread): Acquiring new postgres connection "model.ge_tutorials.npi_with_state".
+2020-10-10 03:03:48.239231 (MainThread): Opening a new connection, currently in state init
+2020-10-10 03:03:48.268147 (MainThread): Acquiring new postgres connection "model.ge_tutorials.count_providers_by_state".
+2020-10-10 03:03:48.268329 (MainThread): Opening a new connection, currently in state init
+2020-10-10 03:03:48.278049 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_state_abbreviations".
+2020-10-10 03:03:48.278226 (MainThread): Opening a new connection, currently in state init
+2020-10-10 03:03:48.289147 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_npi".
+2020-10-10 03:03:48.289349 (MainThread): Opening a new connection, currently in state init
+2020-10-10 03:03:48.766088 (MainThread): Found 4 models, 0 tests, 0 snapshots, 0 analyses, 127 macros, 0 operations, 0 seed files, 2 sources
+2020-10-10 03:03:48.770931 (MainThread): 
+2020-10-10 03:03:48.771134 (MainThread): 03:03:48 | Concurrency: 1 threads (target='dev')
+2020-10-10 03:03:48.771275 (MainThread): 03:03:48 | 
+2020-10-10 03:03:48.778874 (Thread-1): Began running node model.ge_tutorials.stg_npi
+2020-10-10 03:03:48.779327 (Thread-1): Acquiring new postgres connection "model.ge_tutorials.stg_npi".
+2020-10-10 03:03:48.779448 (Thread-1): Opening a new connection, currently in state init
+2020-10-10 03:03:48.779560 (Thread-1): Compiling model.ge_tutorials.stg_npi
+2020-10-10 03:03:48.803050 (Thread-1): Writing injected SQL for node "model.ge_tutorials.stg_npi"
+2020-10-10 03:03:48.803382 (Thread-1): finished collecting timing info
+2020-10-10 03:03:48.803689 (Thread-1): finished collecting timing info
+2020-10-10 03:03:48.804163 (Thread-1): Finished running node model.ge_tutorials.stg_npi
+2020-10-10 03:03:48.804325 (Thread-1): Began running node model.ge_tutorials.stg_state_abbreviations
+2020-10-10 03:03:48.804610 (Thread-1): Acquiring new postgres connection "model.ge_tutorials.stg_state_abbreviations".
+2020-10-10 03:03:48.804740 (Thread-1): Opening a new connection, currently in state init
+2020-10-10 03:03:48.804987 (Thread-1): Compiling model.ge_tutorials.stg_state_abbreviations
+2020-10-10 03:03:48.814446 (Thread-1): Writing injected SQL for node "model.ge_tutorials.stg_state_abbreviations"
+2020-10-10 03:03:48.814755 (Thread-1): finished collecting timing info
+2020-10-10 03:03:48.815052 (Thread-1): finished collecting timing info
+2020-10-10 03:03:48.815529 (Thread-1): Finished running node model.ge_tutorials.stg_state_abbreviations
+2020-10-10 03:03:48.816005 (Thread-1): Began running node model.ge_tutorials.npi_with_state
+2020-10-10 03:03:48.816339 (Thread-1): Acquiring new postgres connection "model.ge_tutorials.npi_with_state".
+2020-10-10 03:03:48.816446 (Thread-1): Opening a new connection, currently in state init
+2020-10-10 03:03:48.816543 (Thread-1): Compiling model.ge_tutorials.npi_with_state
+2020-10-10 03:03:48.827265 (Thread-1): Writing injected SQL for node "model.ge_tutorials.npi_with_state"
+2020-10-10 03:03:48.827550 (Thread-1): finished collecting timing info
+2020-10-10 03:03:48.827834 (Thread-1): finished collecting timing info
+2020-10-10 03:03:48.828296 (Thread-1): Finished running node model.ge_tutorials.npi_with_state
+2020-10-10 03:03:48.828758 (Thread-1): Began running node model.ge_tutorials.count_providers_by_state
+2020-10-10 03:03:48.829077 (Thread-1): Acquiring new postgres connection "model.ge_tutorials.count_providers_by_state".
+2020-10-10 03:03:48.829182 (Thread-1): Opening a new connection, currently in state init
+2020-10-10 03:03:48.829280 (Thread-1): Compiling model.ge_tutorials.count_providers_by_state
+2020-10-10 03:03:48.838439 (Thread-1): Writing injected SQL for node "model.ge_tutorials.count_providers_by_state"
+2020-10-10 03:03:48.838744 (Thread-1): finished collecting timing info
+2020-10-10 03:03:48.839038 (Thread-1): finished collecting timing info
+2020-10-10 03:03:48.839506 (Thread-1): Finished running node model.ge_tutorials.count_providers_by_state
+2020-10-10 03:03:48.878824 (MainThread): Connection 'model.ge_tutorials.stg_npi' was properly closed.
+2020-10-10 03:03:48.878974 (MainThread): Connection 'model.ge_tutorials.count_providers_by_state' was properly closed.
+2020-10-10 03:03:48.892848 (MainThread): 03:03:48 | Done.
+2020-10-10 03:03:48.894637 (MainThread): Acquiring new postgres connection "generate_catalog".
+2020-10-10 03:03:48.894739 (MainThread): Opening a new connection, currently in state init
+2020-10-10 03:03:48.894829 (MainThread): 03:03:48 | Building catalog
+2020-10-10 03:03:48.925631 (ThreadPoolExecutor-0_0): Acquiring new postgres connection "airflow.information_schema".
+2020-10-10 03:03:48.925770 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2020-10-10 03:03:49.029475 (ThreadPoolExecutor-0_0): Using postgres connection "airflow.information_schema".
+2020-10-10 03:03:49.029630 (ThreadPoolExecutor-0_0): On airflow.information_schema: BEGIN
+2020-10-10 03:03:49.032998 (ThreadPoolExecutor-0_0): SQL status: BEGIN in 0.00 seconds
+2020-10-10 03:03:49.033168 (ThreadPoolExecutor-0_0): Using postgres connection "airflow.information_schema".
+2020-10-10 03:03:49.033266 (ThreadPoolExecutor-0_0): On airflow.information_schema: /* {"app": "dbt", "dbt_version": "0.16.0", "profile_name": "ge_tutorials", "target_name": "dev", "connection_name": "airflow.information_schema"} */
+
+    
+    
+
+    select
+        'airflow' as table_database,
+        sch.nspname as table_schema,
+        tbl.relname as table_name,
+        case tbl.relkind
+            when 'v' then 'VIEW'
+            else 'BASE TABLE'
+        end as table_type,
+        null::text as table_comment,
+        col.attname as column_name,
+        col.attnum as column_index,
+        pg_catalog.format_type(col.atttypid, col.atttypmod) as column_type,
+        null::text as column_comment,
+        pg_get_userbyid(tbl.relowner) as table_owner
+
+    from pg_catalog.pg_namespace sch
+    join pg_catalog.pg_class tbl on tbl.relnamespace = sch.oid
+    join pg_catalog.pg_attribute col on col.attrelid = tbl.oid
+
+    where (upper(sch.nspname) = upper('public'))
+      and not pg_is_other_temp_schema(sch.oid) -- not a temporary schema belonging to another session
+      and tbl.relpersistence = 'p' -- [p]ermanent table. Other values are [u]nlogged table, [t]emporary table
+      and tbl.relkind in ('r', 'v', 'f', 'p') -- o[r]dinary table, [v]iew, [f]oreign table, [p]artitioned table. Other values are [i]ndex, [S]equence, [c]omposite type, [t]OAST table, [m]aterialized view
+      and col.attnum > 0 -- negative numbers are used for system columns such as oid
+      and not col.attisdropped -- column as not been dropped
+
+    order by
+        sch.nspname,
+        tbl.relname,
+        col.attnum
+2020-10-10 03:03:49.036525 (ThreadPoolExecutor-0_0): SQL status: SELECT 169 in 0.00 seconds
+2020-10-10 03:03:49.055153 (ThreadPoolExecutor-0_0): On airflow.information_schema: ROLLBACK
+2020-10-10 03:03:49.296477 (MainThread): 03:03:49 | Catalog written to /usr/local/airflow/dbt/target/catalog.json
+2020-10-10 03:03:49.297093 (MainThread): Flushing usage events
+2020-10-10 03:03:49.297308 (MainThread): Connection 'generate_catalog' was properly closed.
+2020-10-10 03:03:49.297428 (MainThread): Connection 'airflow.information_schema' was left open.
+2020-10-10 03:03:49.297540 (MainThread): On airflow.information_schema: Close
+2020-10-10 03:03:50.646865 (MainThread): Got an exception trying to initialize tracking
+2020-10-10 03:03:50.647015 (MainThread): Running with dbt=0.16.0
+2020-10-10 03:03:50.731172 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.serve.ServeTask'>, debug=False, log_cache_events=False, log_format='default', partial_parse=None, port=8085, profile=None, profiles_dir='/usr/local/airflow/.dbt', project_dir=None, record_timing_info=None, rpc_method=None, single_threaded=False, strict=False, target=None, test_new_parser=False, use_cache=True, vars='{}', warn_error=False, which='serve', write_json=True)
+2020-10-10 03:03:50.731527 (MainThread): Tracking: do not track
+2020-10-10 03:03:50.741115 (MainThread): Serving docs at 0.0.0.0:8085
+2020-10-10 03:03:50.741417 (MainThread): To access from your browser, navigate to:  http://localhost:8085
+2020-10-10 03:03:50.741556 (MainThread): Press Ctrl+C to exit.
+
+

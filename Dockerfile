@@ -77,15 +77,15 @@ COPY deploy/script/entrypoint.sh /entrypoint.sh
 
 COPY deploy/config/airflow.cfg ${AIRFLOW_USER_HOME}/airflow.cfg
 
+COPY ./requirements.txt /requirements.txt
+
 RUN chown -R airflow: ${AIRFLOW_USER_HOME}
 
 EXPOSE 8080 5555 8793 8085
 
 RUN set -ex \
-    && pip3 install great_expectations==0.12.1 \
-    && pip3 install dbt==0.16.0 \
     && pip3 uninstall -y SQLAlchemy \
-    && pip3 install SQLAlchemy==1.3.15
+    && pip3 install -r /requirements.txt
 
 USER airflow
 WORKDIR ${AIRFLOW_USER_HOME}

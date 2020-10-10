@@ -38,7 +38,6 @@ services:
             - ./great_expectations_projects/final/great_expectations:/usr/local/airflow/great_expectations_projects/final/great_expectations
             - ./dbt:/usr/local/airflow/dbt
             - ./data:/usr/local/airflow/data
-            # - ./requirements.txt:/requirements.txt
             - ./example_dbt_profile.yml:/usr/local/airflow/.dbt/profiles.yml
         ports:
             - "8080:8080"
