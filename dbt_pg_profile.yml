@@ -4,7 +4,7 @@
 # For more information on how to configure this file, please see:
 # https://docs.getdbt.com/docs/profile
 
-ge_tutorials:
+airflow_dbt_pg:
   outputs:
     dev:
       type: postgres
