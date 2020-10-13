@@ -34,15 +34,15 @@ services:
                 max-size: 10m
                 max-file: "3"
         volumes:
-            - ~/projects/airflow_dags:/usr/local/airflow/dags
-            - ~/projects/airflow_data:/usr/local/airflow/data
-            - ~/projects/great_expectations_projects:/usr/local/airflow/great_expectations
-            - ~/projects/dbt_project:/usr/local/airflow/dbt
+            - ../airflow_dags:/usr/local/airflow/dags
+            - ../airflow_data:/usr/local/airflow/data
+            - ../great_expectations_projects:/usr/local/airflow/great_expectations
+            - ../dbt_project:/usr/local/airflow/dbt
             - ./dbt_pg_profile.yml:/usr/local/airflow/.dbt/profiles.yml
         ports:
             - "8080:8080"
             # - "8888:8888"
-            # - "8085:8085"
+            - "8085:8085"
         command: webserver
         healthcheck:
             test: ["CMD-SHELL", "[ -f /usr/local/airflow/airflow-webserver.pid ]"]
