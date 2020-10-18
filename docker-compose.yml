@@ -36,7 +36,7 @@ services:
         volumes:
             - ../airflow_dags:/usr/local/airflow/dags
             - ../airflow_data:/usr/local/airflow/data
-            - ../great_expectations_projects:/usr/local/airflow/great_expectations
+            - ../great_expectations_projects/airflow_expectations/:/usr/local/airflow/great_expectations
             - ../dbt_project:/usr/local/airflow/dbt
             - ./dbt_pg_profile.yml:/usr/local/airflow/.dbt/profiles.yml
         ports:
@@ -56,4 +56,4 @@ services:
         ports:
             - 8081:80
         volumes:
-            - ~/projects/great_expectations_projects/final/great_expectations/uncommitted/data_docs/local_site:/static
+            - ../great_expectations_projects/airflow_expectations/uncommitted/data_docs/local_site:/static
