@@ -10,3 +10,4 @@
 * Airflow: http://localhost:8080/
 * DBT Docs: http://localhost:8085/
 * Great Expectations Docs: http://localhost:8081/
+4. Enter AIrflow WebServer Container cmd: docker exec -it airflow_webserver sh -c "/entrypoint.sh /bin/bash"
