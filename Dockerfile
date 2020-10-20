@@ -80,7 +80,7 @@ COPY deploy/script/entrypoint.sh /entrypoint.sh
 
 COPY deploy/config/airflow.cfg ${AIRFLOW_USER_HOME}/airflow.cfg
 
-COPY ./requirements.txt /requirements.txt
+COPY deploy/requirements/requirements.txt /requirements.txt
 
 RUN chown -R airflow: ${AIRFLOW_USER_HOME}
 
