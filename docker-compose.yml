@@ -38,7 +38,7 @@ services:
             - ../airflow_data:/usr/local/airflow/data
             - ../great_expectations_projects/airflow_expectations/:/usr/local/airflow/great_expectations
             - ../dbt_project:/usr/local/airflow/dbt
-            - ./dbt_pg_profile.yml:/usr/local/airflow/.dbt/profiles.yml
+            - ./deploy/dbt_profiles/dbt_pg_profile.yml:/usr/local/airflow/.dbt/profiles.yml
         ports:
             - "8080:8080"
             # - "8888:8888"
