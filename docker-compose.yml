@@ -23,12 +23,13 @@ services:
         environment:
             - LOAD_EX=n
             - EXECUTOR=Local
-            # TODO: create a separate schema for real data
             - PG_DB_URL=postgres://airflow:airflow@postgres:5432/airflow
             - AIRFLOW_ROOT_PATH=/usr/local/airflow/
+            - DAGS_ROOT_PATH=/usr/local/airflow/dags
             - DATA_ROOT_PATH=/usr/local/airflow/data
             - GE_PROJECT_PATH=/usr/local/airflow/great_expectations
             - DBT_PROJECT_PATH=/usr/local/airflow/dbt
+            # - PYTHONPATH=/usr/local/airflow/dags/omr_airflow_dags
         logging:
             options:
                 max-size: 10m
