@@ -17,7 +17,7 @@ services:
     webserver:
         build: .
         container_name: airflow_webserver
-        restart: always
+        restart: "no"
         depends_on:
             - postgres
         environment:
