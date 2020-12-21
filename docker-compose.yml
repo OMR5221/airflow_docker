@@ -29,6 +29,7 @@ services:
             - DATA_ROOT_PATH=/usr/local/airflow/data
             - GE_PROJECT_PATH=/usr/local/airflow/great_expectations
             - DBT_PROJECT_PATH=/usr/local/airflow/dbt
+            - DBT_PROFILE_PATH=/usr/local/airflow/.dbt
             # - PYTHONPATH=/usr/local/airflow/dags/omr_airflow_dags
         logging:
             options:
@@ -39,7 +40,8 @@ services:
             - ../airflow_data:/usr/local/airflow/data
             - ../great_expectations_projects/airflow_expectations/:/usr/local/airflow/great_expectations
             - ../dbt_project:/usr/local/airflow/dbt
-            - ./deploy/dbt_profiles/dbt_pg_profile.yml:/usr/local/airflow/.dbt/profiles.yml
+            - ./deploy/dbt_profiles/dbt_profile.yml:/usr/local/airflow/.dbt/profiles.yml
+            - ~/.ssh/gcp_keys:/usr/local/airflow/keys
         ports:
             - "8080:8080"
             # - "8888:8888"

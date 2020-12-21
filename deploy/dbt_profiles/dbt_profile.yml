@@ -4,7 +4,7 @@
 # For more information on how to configure this file, please see:
 # https://docs.getdbt.com/docs/profile
 
-airflow_dbt_pg:
+airflow_dbt:
   outputs:
     dev:
       type: postgres
@@ -25,3 +25,17 @@ airflow_dbt_pg:
       dbname: airflow
       schema: public
   target: dev
+
+jaffle_shop: # this needs to match the profile: in your dbt_project.yml file
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      keyfile: /usr/local/airflow/keys/dbt-bigquery-user-key.json # replace this with the full path to your keyfile
+      project: omr-data-services # Replace this with your project id
+      dataset: test_data # Replace this with dbt_your_name, e.g. dbt_bob
+      threads: 1
+      timeout_seconds: 300
+      location: US
+      priority: interactive

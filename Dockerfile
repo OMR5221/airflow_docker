@@ -97,11 +97,10 @@ RUN set -ex \
 # RUN --mount=type=ssh git clone git@github.com:OMR5221/dbt_project.git
 
 WORKDIR ${AIRFLOW_USER_HOME}
+USER airflow
 RUN git clone https://github.com/OMR5221/dbt_project.git \
 && git clone https://github.com/OMR5221/great_expectations_projects.git \
 && git clone https://github.com/OMR5221/airflow_dags.git \
 && git clone https://github.com/OMR5221/airflow_data.git
-
-USER airflow
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["webserver"]
